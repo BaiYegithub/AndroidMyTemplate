@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/one"
+        android:title="one" />
+
+    <item
+        android:id="@+id/two"
+        android:title="two" />
+
+    <item
+        android:id="@+id/three"
+        android:title="three" />
+
+    <item
+        android:id="@+id/four"
+        android:title="four" />
+
+    <item
+        android:id="@+id/five"
+        android:title="five" />
+
+    <item
+        android:id="@+id/six"
+        android:title="six" />
+    <item
+        android:id="@+id/seven"
+        android:title="seven" />
+
+    <item
+        android:id="@+id/eight"
+        android:title="eight" />
+</menu>

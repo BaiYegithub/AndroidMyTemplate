@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Template.iml" filepath="$PROJECT_DIR$/Template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appk/appk.iml" filepath="$PROJECT_DIR$/appk/appk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame/frame.iml" filepath="$PROJECT_DIR$/frame/frame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/framework/framework.iml" filepath="$PROJECT_DIR$/framework/framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdesign/materialdesign.iml" filepath="$PROJECT_DIR$/materialdesign/materialdesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mixed/mixed.iml" filepath="$PROJECT_DIR$/mixed/mixed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/profession/profession.iml" filepath="$PROJECT_DIR$/profession/profession.iml" />
+      <module fileurl="file://$PROJECT_DIR$/safety/safety.iml" filepath="$PROJECT_DIR$/safety/safety.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smalllibrary/smalllibrary.iml" filepath="$PROJECT_DIR$/smalllibrary/smalllibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system.iml" filepath="$PROJECT_DIR$/system/system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/third/third.iml" filepath="$PROJECT_DIR$/third/third.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unit/unit.iml" filepath="$PROJECT_DIR$/unit/unit.iml" />
+    </modules>
+  </component>
+</project>
