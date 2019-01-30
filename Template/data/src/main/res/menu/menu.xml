@@ -3,32 +3,32 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/one"
-        android:title="one" />
+        android:title="增加"/>
 
     <item
         android:id="@+id/two"
-        android:title="two" />
+        android:title="删除"/>
 
     <item
         android:id="@+id/three"
-        android:title="three" />
+        android:title="查询"/>
 
     <item
         android:id="@+id/four"
-        android:title="four" />
+        android:title="four"/>
 
     <item
         android:id="@+id/five"
-        android:title="five" />
+        android:title="five"/>
 
     <item
         android:id="@+id/six"
-        android:title="six" />
+        android:title="six"/>
     <item
         android:id="@+id/seven"
-        android:title="seven" />
+        android:title="seven"/>
 
     <item
         android:id="@+id/eight"
-        android:title="eight" />
+        android:title="eight"/>
 </menu>

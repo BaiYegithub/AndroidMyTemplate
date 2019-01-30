@@ -30,5 +30,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile project(':common')
+    //LitePal 数据库
+    compile 'org.litepal.android:java:3.0.0'
+
     testCompile 'junit:junit:4.12'
 }
