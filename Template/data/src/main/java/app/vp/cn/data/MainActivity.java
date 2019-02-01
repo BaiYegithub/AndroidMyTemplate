@@ -65,11 +65,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.three: //查询
                 List<StudentBean> studentBeanList = LitePal.findAll(StudentBean.class);
                 for (int j = 0; j < studentBeanList.size(); j++) {
-                    LogUtil.i("mydata", "学生姓名:" + studentBeanList.get(j).getStudentName() + "所属班级" + studentBeanList.get(j).getMyClassBean().getClassName());
+                    LogUtil.i("mydata", "学生姓名:" + studentBeanList.get(j).getStudentName() + "所属班级" + studentBeanList.get(j).getMyClassBean().getMyClassName());
                 }
                 List<MyClassBean> myClassBeanList = LitePal.findAll(MyClassBean.class);
                 List<StudentBean> studentBeanList1 = myClassBeanList.get(0).getStudentBeanList();
-
                 break;
             //
             case R.id.four:

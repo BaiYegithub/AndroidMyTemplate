@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MyClassBean extends LitePalSupport {
 
-    //主见是integer类型的，自增
+    //主键是integer类型的，自增
 
     //班级id 唯一
     private String classId;

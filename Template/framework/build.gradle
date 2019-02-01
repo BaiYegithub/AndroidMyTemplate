@@ -1,11 +1,16 @@
-apply plugin: 'com.android.application'
+if (isModule.toBoolean()) {  //组件化开发，在grade.properties 里面配置是集成模式还是组件模式，分别设置，
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion 26
     buildToolsVersion "28.0.1"
 
     defaultConfig {
-        applicationId "app.vp.cn.framework"
+        //注释掉applicationId  在组件模式下不会报错
+        // applicationId "app.vp.cn.framework"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -20,6 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -27,8 +33,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile project(':common')
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile project(':common')
+
+    compile 'android.arch.lifecycle:extensions:1.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }

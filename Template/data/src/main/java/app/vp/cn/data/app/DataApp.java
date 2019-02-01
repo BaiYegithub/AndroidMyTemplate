@@ -2,8 +2,6 @@ package app.vp.cn.data.app;
 
 import android.content.Context;
 
-import com.facebook.stetho.Stetho;
-
 import org.litepal.LitePal;
 import org.litepal.LitePalApplication;
 
@@ -24,7 +22,6 @@ public class DataApp extends LitePalApplication {
         // 初始化
         LitePal.initialize(this);
 
-        Stetho.initializeWithDefaults(this);
     }
 
     public static Context getmContext() {
