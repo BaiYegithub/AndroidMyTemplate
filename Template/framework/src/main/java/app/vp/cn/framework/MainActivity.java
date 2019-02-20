@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.ll_ac2, bottomFragment).commit();
 
         userModel = ViewModelProviders.of(this).get(UserModel.class);
-        userModel.getMutable().postValue(new User("我是MainActivity"));
+       // userModel.getMutable().postValue(new User("我是MainActivity"));
     }
 
     @OnClick(R.id.bt_acMain)

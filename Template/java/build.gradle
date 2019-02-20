@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply from: 'other.gradle'
 android {
     compileSdkVersion 26
     buildToolsVersion "28.0.1"
@@ -20,6 +20,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    def x = 0
+    for (i in 0..3) {
+        x += i;
+    }
+    System.out.println("啦啦啦啦啦啦" + x);
+
+    //groovy  IO操作 必须传入绝对路径
+
+    def filePath = "E:\\AndroidMyTemplate\\Template\\java\\src\\main\\res\\assets\\aa.txt"
+    def file = new File(filePath)
+    println file.text
+
+    println "版本为:${verson},地址为：${url}，姓名为: ${person}"
 }
 
 dependencies {

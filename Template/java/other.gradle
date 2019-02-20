@@ -1,0 +1,5 @@
+ext {
+    verson = '1.0'
+    url = 'http://baiye.cn'
+    person = '白叶'
+}
