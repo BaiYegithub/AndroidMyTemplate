@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
-apply from: 'other.gradle'
+
 android {
     compileSdkVersion 26
     buildToolsVersion "28.0.1"
 
     defaultConfig {
-        applicationId "app.vp.cn.java"
+        applicationId "app.vp.cn.ui"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -20,20 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    def x = 0
-    for (i in 0..3) {
-        x += i;
-    }
-    System.out.println("啦啦啦啦啦啦" + x);
-
-    //groovy  IO操作 必须传入绝对路径
-
-  /*  def filePath = "E:\\AndroidMyTemplate\\Template\\java\\src\\main\\res\\assets\\aa.txt"
-    def file = new File(filePath)
-    println file.text
-*/
-    println "版本为:${verson},地址为：${url}，姓名为: ${person}"
 }
 
 dependencies {
@@ -41,8 +27,9 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile project(':common')
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     testCompile 'junit:junit:4.12'
 }
