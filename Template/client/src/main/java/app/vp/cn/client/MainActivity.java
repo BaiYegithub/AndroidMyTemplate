@@ -1,4 +1,4 @@
-package app.vp.cn.system;
+package app.vp.cn.client;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -13,14 +13,13 @@ import android.widget.Button;
 
 import java.util.List;
 
+import app.vp.cn.system.IMyAidl;
 import app.vp.cn.system.bean.Person;
-import app.vp.cn.system.service.MyAidlService;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-
 
     @BindView(R.id.bt_add)
     Button btAdd;
@@ -50,38 +49,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindMyService() {
-        Intent intent = new Intent(getApplicationContext(), MyAidlService.class);
-        /*intent.setAction("app.vp.cn.system.service.MyAidlService");
-        intent.setPackage("app.vp.cn.system.service");*/
+        Intent intent = new Intent();
+        intent.setAction("app.vp.cn.system.service.MyAidlService");
+        intent.setPackage("app.vp.cn.system.service");
         startService(intent);
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
+
     @OnClick({R.id.bt_add, R.id.bt_get})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.bt_add:
-                try {
-                    myAidl.addPerson(new Person("小明同学"));
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                    Log.i("xxx","异常是"+e);
-                }
-                break;
-            case R.id.bt_get:
-                List<Person> personList = null;
-                try {
-                    personList = myAidl.getPersonList();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-                Log.i("xxx", "onViewClicked: " + personList.toString());
-                break;
-        }
-    }
-
-
-  /*  @OnClick({R.id.bt_add, R.id.bt_get})
     public void onViewClicked(View view) throws RemoteException {
         switch (view.getId()) {
             case R.id.bt_add:
@@ -96,5 +72,5 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("xxx", "onViewClicked: " + personList.toString());
                 break;
         }
-    }*/
+    }
 }

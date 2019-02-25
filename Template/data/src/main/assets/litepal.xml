@@ -32,8 +32,8 @@
     	</list>
     -->
     <list>
-        <mapping class="app.vp.cn.data.bean.MyClassBean"/>
-        <mapping class="app.vp.cn.data.bean.StudentBean"/>
+        <mapping class="app.vp.cn.data.app.vp.cn.system.bean.MyClassBean"/>
+        <mapping class="app.vp.cn.data.app.vp.cn.system.bean.StudentBean"/>
     </list>
 
     <!--
