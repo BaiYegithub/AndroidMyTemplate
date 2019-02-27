@@ -18,11 +18,22 @@
         </activity>
 
         <service
-            android:name="app.vp.cn.system.service.MyAidlService"
+            android:name=".service.MyAidlService"
             android:enabled="true"
             android:exported="true"
-            android:process=":aidl"
-            />
+            android:process=":aidl"/>
+        <service
+            android:name=".service.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":messenger"/>
+
+        <activity
+            android:name=".SecondActivity"
+            android:process=":lala">
+        </activity>
+        <activity android:name=".MessengerActivity">
+        </activity>
     </application>
 
 </manifest>

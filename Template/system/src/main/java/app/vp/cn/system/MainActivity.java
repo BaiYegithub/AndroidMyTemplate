@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Button btGet;
     private IMyAidl myAidl;
 
+
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
-    @OnClick({R.id.bt_add, R.id.bt_get})
+    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec,R.id.to_messenger})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_add:
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     myAidl.addPerson(new Person("小明同学"));
                 } catch (RemoteException e) {
                     e.printStackTrace();
-                    Log.i("xxx","异常是"+e);
+                    Log.i("xxx", "异常是" + e);
                 }
                 break;
             case R.id.bt_get:
@@ -76,6 +77,17 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Log.i("xxx", "onViewClicked: " + personList.toString());
+                break;
+            case R.id.to_sec:
+                ConstansUtils.a = "2";  //Intent 可以在不同的进程中去传值，  静态变量a 在一个新的进程去获得的时候会拿到原始数据
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("name", "不同进程的Activity呀呀呀");
+                startActivity(intent);
+                Log.i("aaa", "MainActivity 中的a的值" + ConstansUtils.a);
+                break;
+            case R.id.to_messenger:
+                Intent intent1 = new Intent(MainActivity.this, MessengerActivity.class);
+                startActivity(intent1);
                 break;
         }
     }

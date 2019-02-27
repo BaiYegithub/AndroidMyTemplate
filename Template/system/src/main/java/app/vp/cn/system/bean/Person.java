@@ -17,8 +17,9 @@ public class Person implements Parcelable {
         this.mName = mName;
     }
 
+
     protected Person(Parcel in) {
-        mName = in.readString();
+        mName = in.readString(); //这个是一定要写的
     }
 
     public static final Creator<Person> CREATOR = new Creator<Person>() {

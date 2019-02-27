@@ -20,5 +20,15 @@
         android:layout_height="wrap_content"
         android:text="获取人员"/>
 
+    <Button
+        android:id="@+id/to_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到第二个Activity"/>
 
+    <Button
+        android:id="@+id/to_messenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to_messenger   Activity"/>
 </LinearLayout>
