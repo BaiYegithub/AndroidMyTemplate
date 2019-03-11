@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
-    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec,R.id.to_messenger})
+    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec,R.id.to_messenger,R.id.to_provider})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_add:
@@ -88,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.to_messenger:
                 Intent intent1 = new Intent(MainActivity.this, MessengerActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.to_provider:
+                Intent intent2 = new Intent(MainActivity.this, ProviderActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

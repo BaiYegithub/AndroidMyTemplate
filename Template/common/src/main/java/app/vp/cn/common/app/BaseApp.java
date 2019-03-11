@@ -28,6 +28,7 @@ public class BaseApp extends Application {
 
     public static BaseApp getInstance() {
         return instance;
+
     }
 
     public static Context getmContext() {

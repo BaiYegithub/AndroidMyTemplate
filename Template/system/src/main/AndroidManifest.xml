@@ -34,6 +34,18 @@
         </activity>
         <activity android:name=".MessengerActivity">
         </activity>
+
+        <provider
+            android:name=".provider.BookProvider"
+            android:authorities="app.vp.cn.system.provider.BookProvider"
+            android:permission="app.system.PROVIDER"
+            android:process=":provider"/>
+
+        <!--访问BookProvider 要加上和BookProvider 一样的权限-->
+        <activity
+            android:name=".ProviderActivity"
+            android:permission="app.system.PROVIDER">
+        </activity>
     </application>
 
 </manifest>

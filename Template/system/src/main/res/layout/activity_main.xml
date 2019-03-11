@@ -31,4 +31,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="to_messenger   Activity"/>
+
+    <Button
+        android:id="@+id/to_provider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to_ProviderActivity"/>
 </LinearLayout>

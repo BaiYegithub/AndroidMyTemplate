@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -35,6 +36,18 @@ public class MainActivity extends AppCompatActivity {
         }
         RcvAdapter rcvAdapter = new RcvAdapter(list);
         rcv.setAdapter(rcvAdapter);
+
+
+        rcv.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                int i = rcv.computeVerticalScrollOffset();
+                Log.i("xxx", "onCreate: 滑动后的距离" + i); //这里滑动的距离是基于item 的平均高度算得
+            }
+        });
+
+
     }
 
     @OnClick(R.id.iv_back)
