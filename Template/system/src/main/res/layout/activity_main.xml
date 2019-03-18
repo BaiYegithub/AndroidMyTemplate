@@ -37,4 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="to_ProviderActivity"/>
+
+    <Button
+        android:id="@+id/to_WxApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到微信app"/>
 </LinearLayout>

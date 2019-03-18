@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+    <TextView
+        android:id="@+id/tv_time_left_itemQa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_tv_time_bg"
+        android:paddingBottom="4dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="4dp"
+        android:text="09-20 09:23"
+        android:textColor="@color/white"
+        android:textSize="17dp"/>
+
+    <app.vp.cn.common.view.CircleImageView
+        android:id="@+id/iv_left_itemQa_left"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_below="@id/tv_time_left_itemQa"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/headimg_default"/>
+
+    <TextView
+        android:id="@+id/tv_teacherName_itemQa_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time_left_itemQa"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="20dp"
+        android:text="韩莎莎"
+        android:textColor="#999999"
+        android:textSize="11sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_teacherName_itemQa_left"
+        android:layout_marginLeft="63dp"
+        android:layout_marginRight="58dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bubble_white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="13dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:id="@+id/tv_answer_left_itemQa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="没有"
+            android:textColor="#FF4492FF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -3,6 +3,7 @@ package app.vp.cn.system;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
-    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec,R.id.to_messenger,R.id.to_provider})
+    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec, R.id.to_messenger, R.id.to_provider, R.id.to_WxApp})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_add:
@@ -92,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.to_provider:
                 Intent intent2 = new Intent(MainActivity.this, ProviderActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.to_WxApp:
+                Intent intent3 = new Intent();
+                intent3.setAction(Intent.ACTION_VIEW);
+                intent3.setData(Uri.parse("http://pay.wangxiao.cn/zhuntiku/WeiXinGetPara.aspx?ordernumber=201903092027441021046&classID=11111111-1111-1111-1111-111111111111"));
+                startActivity(intent3);
                 break;
         }
     }

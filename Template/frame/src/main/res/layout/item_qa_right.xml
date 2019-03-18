@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+    <TextView
+        android:id="@+id/tv_time_mine_itemQa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_tv_time_bg"
+        android:paddingBottom="4dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="4dp"
+        android:text="09-20 09:23"
+        android:textColor="@color/white"
+        android:textSize="17dp"/>
+
+    <app.vp.cn.common.view.CircleImageView
+        android:id="@+id/iv_mine_itemQa"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_time_mine_itemQa"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/headimg_default"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_time_mine_itemQa"
+        android:layout_marginLeft="63dp"
+        android:layout_marginRight="58dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bubble_blue"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="13dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:id="@+id/tv_question_mine_itemQa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="没有"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
