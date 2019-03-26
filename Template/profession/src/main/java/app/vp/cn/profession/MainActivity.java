@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         rcv.setLayoutManager(new LinearLayoutManager(this));
-
+        rcv.setHasFixedSize(true);
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 3; i++) {
             list.add("自动滚动到指定位置" + i);
         }
         RcvAdapter rcvAdapter = new RcvAdapter(list);
-        rcv.setAdapter(rcvAdapter);
-
-
+        rcv.swapAdapter(rcvAdapter, false);
+        list.add("我是新插入的数据");
+        rcvAdapter.notifyItemRangeInserted(0, list.size());
         rcv.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("xxx", "onCreate: 滑动后的距离" + i); //这里滑动的距离是基于item 的平均高度算得
             }
         });
+
+        rcv.setRecycledViewPool(new RecyclerView.RecycledViewPool());
 
 
     }

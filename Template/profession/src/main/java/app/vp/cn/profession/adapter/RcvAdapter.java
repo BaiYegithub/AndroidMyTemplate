@@ -28,7 +28,7 @@ public class RcvAdapter extends RecyclerView.Adapter {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
         return new ItemViewHolder(view);
     }
 
@@ -36,6 +36,7 @@ public class RcvAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
         itemViewHolder.tv_text.setText(list.get(position));
+
     }
 
     @Override
@@ -53,4 +54,6 @@ public class RcvAdapter extends RecyclerView.Adapter {
             ButterKnife.bind(this, itemView);
         }
     }
+
+
 }
