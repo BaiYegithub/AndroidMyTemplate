@@ -1,15 +1,8 @@
 package app.vp.cn.common.http.network;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.adapter.rxjava2.Result;
 
 /**
  * author : by
@@ -30,6 +23,8 @@ public class BaseApiServiceHelper {
     private static <T> Flowable<T> getFlowable(Flowable<T> flowable) {
         return flowable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
+
+
 
 
 }

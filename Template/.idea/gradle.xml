@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/third" />
             <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/unit" />
+            <option value="$PROJECT_DIR$/utils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

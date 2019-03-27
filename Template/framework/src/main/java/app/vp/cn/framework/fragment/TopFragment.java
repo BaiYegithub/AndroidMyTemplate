@@ -3,6 +3,9 @@ package app.vp.cn.framework.fragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,6 +27,14 @@ public class TopFragment extends Fragment {
 
     private TextView tvFragOne;
     private UserModel userModel;
+
+    //这是一个回调在主线程的looper  ()  只是一个demo
+    Handler mMainHandler = new Handler(Looper.getMainLooper()) {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Nullable
     @Override

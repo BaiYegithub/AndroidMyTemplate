@@ -6,7 +6,7 @@ import android.arch.lifecycle.ViewModel;
 /**
  * author : by
  * date: 2019/1/30 0030  下午 5:02.
- * describe UserModel 类
+ * describe UserModel  类
  */
 
 public class UserModel extends ViewModel {
@@ -25,6 +25,7 @@ public class UserModel extends ViewModel {
     @Override
     protected void onCleared() {
         super.onCleared();
+
     }
 
 }
