@@ -23,9 +23,19 @@
         android:layout_height="wrap_content"
 
         android:text="显示"/>
+
     <Button
         android:id="@+id/tv_hide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="隐藏"/>
+
+    <EditText
+        android:id="@+id/et_acMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"/>
+
+
 </LinearLayout>

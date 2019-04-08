@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import app.vp.cn.framework.R;
@@ -41,7 +42,7 @@ public class TopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_one, container, false);
         tvFragOne = view.findViewById(R.id.tv_fragOne);
-
+        Button bt_fragOne = view.findViewById(R.id.bt_fragOne);
         //如果是在同一个Activity中进行传值，这里的第一个参数，必须是getActivity,不能是this
         userModel = ViewModelProviders.of(getActivity()).get(UserModel.class);
 
@@ -58,6 +59,14 @@ public class TopFragment extends Fragment {
                 userModel.getMutable().postValue(new User("小明"));
             }
         });
+
+        bt_fragOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvFragOne.setText("我是点击设置进来的值");
+            }
+        });
+
         return view;
     }
 }

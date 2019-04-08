@@ -14,13 +14,17 @@
 
         </activity>
         <activity android:name=".Secondactivity">
-        </activity>
-        <activity android:name=".LifecycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".LifecycleActivity">
+
+        </activity>
+        <activity android:name=".LiveData1Activity">
+
         </activity>
     </application>
 

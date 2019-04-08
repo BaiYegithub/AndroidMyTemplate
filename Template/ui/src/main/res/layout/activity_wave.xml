@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="app.vp.cn.ui.WaveActivity">
+
+    <app.vp.cn.ui.view.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:background="@drawable/bg_ball"/>
+
+    <RatingBar
+        android:id="@+id/rtBar_itemCollection"
+        style="@style/myRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>

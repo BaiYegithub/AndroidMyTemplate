@@ -2,9 +2,14 @@ package app.vp.cn.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputFilter;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.Button;
+import android.widget.EditText;
+
+import app.vp.cn.ui.view.EnglishCharFilter;
+import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     Button btShow;
     @butterknife.BindView(R.id.tv_hide)
     Button tvHide;
+
+    @BindView(R.id.et_acMain)
+    EditText et_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         viewStub.setVisibility(View.VISIBLE);
         viewStub.setVisibility(View.GONE);*/
 
+        //这里给输入框加入了一个限制，输入内容不能大于4个字节  （意思是汉字不能多于两个，英文字母不能多于4个）
+        et_main.setFilters(new InputFilter[]{new EnglishCharFilter(4)});
 
     }
 

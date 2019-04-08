@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="myRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_layer</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:numStars">3</item>
+        <item name="android:rating">1</item>
+        <item name="android:max">3</item>
+    </style>
+
 </resources>

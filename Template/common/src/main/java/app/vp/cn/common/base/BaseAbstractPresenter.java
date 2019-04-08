@@ -5,6 +5,7 @@ import android.arch.lifecycle.LifecycleObserver;
 import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.OnLifecycleEvent;
 
+import app.vp.cn.common.util.LogUtil;
 import io.reactivex.disposables.CompositeDisposable;
 
 /**
@@ -30,6 +31,7 @@ public class BaseAbstractPresenter<T extends BaseView> implements BasePresenter,
     public void detachView() {
         if (compositeDisposable != null) { //不判断compositeDisposable 是否disposed ,因为源码里面判断过了
             compositeDisposable.dispose();
+            LogUtil.i("生命周期","清空资源，走了onDestroy 方法");
         }
         lifecycleOwner.getLifecycle().removeObserver(this);
     }
