@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="app.vp.cn.ui">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +18,9 @@
         <activity android:name=".RecyclerActivity">
         </activity>
         <activity android:name=".WaveActivity">
+
+        </activity>
+        <activity android:name=".HtmlEditActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

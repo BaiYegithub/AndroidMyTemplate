@@ -1,6 +1,7 @@
 package app.vp.cn.profession;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -59,5 +60,18 @@ public class MainActivity extends AppCompatActivity {
 
         // rcv.scrollBy(0, 200); //滚动到指定距离
         // rcv.smoothScrollBy(0, 500);  //滚动到指定距离  带动画
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        outState.putInt("key", 1);
+        Log.i("123","走了onSaveInstanceState方法");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
     }
 }

@@ -25,7 +25,6 @@ public class UserModel extends ViewModel {
     @Override
     protected void onCleared() {
         super.onCleared();
-
     }
 
 }

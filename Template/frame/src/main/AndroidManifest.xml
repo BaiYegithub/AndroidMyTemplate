@@ -21,8 +21,10 @@
             </intent-filter>
         </activity>
 
+        <!--加process 属性 可以开启一个新的进程-->
         <service android:name=".service.TCPServerService"
-            android:exported="true"/>
+            android:exported="true"
+            android:process=":remote111"/>
     </application>
 
 </manifest>
