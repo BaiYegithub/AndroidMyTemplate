@@ -1,26 +1,29 @@
 package app.vp.cn.ui;
 
 import android.graphics.Color;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import app.vp.cn.common.base.BaseActivity;
 import jp.wasabeef.richeditor.RichEditor;
 
-public class HtmlEditActivity extends AppCompatActivity {
+public class HtmlEditActivity extends BaseActivity {
 
     private RichEditor mEditor;
     //预览视图的editText
     private TextView mPreview;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_html_edit);
+    protected int initContentView() {
+        return R.layout.activity_html_edit;
+    }
+
+    @Override
+    protected void initViewAndData() {
         mEditor = (RichEditor) findViewById(R.id.editor);
 
         //初始化编辑高度
-        mEditor.setEditorHeight(200);
+        // mEditor.setEditorHeight(200);
         //初始化字体大小
         mEditor.setEditorFontSize(22);
         //初始化字体颜色
@@ -32,7 +35,7 @@ public class HtmlEditActivity extends AppCompatActivity {
         //设置编辑框背景，可以是网络图片
         // mEditor.setBackground("https://raw.githubusercontent.com/wasabeef/art/master/chip.jpg");
         // mEditor.setBackgroundColor(Color.BLUE);
-       // mEditor.setBackgroundResource(R.drawable.bg);
+        // mEditor.setBackgroundResource(R.drawable.bg);
         //设置默认显示语句
         mEditor.setPlaceholder("Insert text here...");
         //设置编辑器是否可用
@@ -213,5 +216,20 @@ public class HtmlEditActivity extends AppCompatActivity {
                 mEditor.insertTodo();
             }
         });
+    }
+
+    @Override
+    protected void initHttp() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void destroyResources() {
+
     }
 }
