@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!--设置priority 属性，提高优先级-->
+        <service
+            android:name=".service.MyService"
+            android:priority="1000"/>
     </application>
 
 </manifest>

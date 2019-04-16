@@ -27,7 +27,6 @@ public class WaveView extends View {
     private int height;
     //View的画笔
     private Paint wavePaint;
-    private Paint wavePaint2;
     private Paint textPaint;
     private Paint circlePaint;
 
@@ -66,11 +65,6 @@ public class WaveView extends View {
         wavePaint.setAntiAlias(true);
         wavePaint.setStyle(Paint.Style.FILL);
         wavePaint.setColor(Color.parseColor("#FF4545"));
-
-        wavePaint2 = new Paint();
-        wavePaint.setAntiAlias(true);
-        wavePaint.setStyle(Paint.Style.FILL);
-        wavePaint.setColor(Color.parseColor("#FEAEAE"));
 
 
         circlePaint = new Paint();
@@ -213,41 +207,6 @@ public class WaveView extends View {
         }
     }
 
-    private void drawWave2Path(Canvas canvas) {
-        //根据进度改变起点坐标的y值
-        startPoint.y = (int) ((1 - (progress / 100.0)) * (height / 2 + width / 2));
-        Log.e("TAG", "startPoint.y:" + startPoint.y);
-        //移动区域起点
-        path.moveTo(startPoint.x + cycle, startPoint.y);
-        int j = 1;
-        //循环绘制正弦曲线区域，循环两个周期
-        for (int i = 1; i <= 8; i++) {
-            if (i % 2 == 0) {
-                //波峰
-                path.quadTo(startPoint.x + (cycle * j), startPoint.y + waveHeight,
-                        startPoint.x + (cycle * 2) * i, startPoint.y);
-            } else {
-                //波谷
-                path.quadTo(startPoint.x + (cycle * j), startPoint.y - waveHeight,
-                        startPoint.x + (cycle * 2) * i, startPoint.y);
-            }
-            j += 2;
-        }
-        //绘制封闭的区域
-        path.lineTo(width, height);//右下角
-        path.lineTo(startPoint.x, height);//左下角
-        path.lineTo(startPoint.x, startPoint.y);//起点
-        path.close();
-        //绘制区域
-        canvas.drawPath(path, wavePaint2);
-        path.reset();
-        //一开始的起点是在-160，160 = 40 + 40 + 40 + 40，走完一个周期则回到原点
-        if (startPoint.x + translateX >= 0) {
-            startPoint.x = -cycle * 4;
-        } else {
-            startPoint.x += translateX;
-        }
-    }
 
     /**
      * 绘制进度文字

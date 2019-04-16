@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 //此处就是用来获取键盘的高度的， 在键盘没有弹出的时候 此高度为0 键盘弹出的时候为一个正数
                 int heightDifference = screenHeight - r.bottom;
                 //检查是否有底部导航栏，有的话要减去底部导航栏的高度
-                if (UIUtils.checkDeviceHasNavigationBar()) {
+                if (UIUtils.isNavigationBarExist(MainActivity.this)) {
                     heightDifference -= UIUtils.getVirtualBarHeigh();
                 }
 

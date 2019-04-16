@@ -1,11 +1,14 @@
 package app.vp.cn.common.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Environment;
 import android.os.storage.StorageManager;
+import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -14,6 +17,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import app.vp.cn.common.app.BaseApp;
+
+import static android.view.View.NO_ID;
 
 /**
  * author : by
@@ -95,7 +100,6 @@ public class UIUtils {
     /**
      * 获取是否存在NavigationBar
      *
-     * @param context
      * @return
      */
     public static boolean checkDeviceHasNavigationBar() {
@@ -122,7 +126,6 @@ public class UIUtils {
     /**
      * 获取虚拟功能键高度
      *
-     * @param context
      * @return
      */
     public static int getVirtualBarHeigh() {
@@ -142,4 +145,22 @@ public class UIUtils {
         }
         return vh;
     }
+
+    private static final String NAVIGATION = "navigationBarBackground";
+
+    // 该方法需要在View完全被绘制出来之后调用，否则判断不了
+    //在比如 onWindowFocusChanged（）方法中可以得到正确的结果
+    public static boolean isNavigationBarExist(@NonNull Activity activity) {
+        ViewGroup vp = (ViewGroup) activity.getWindow().getDecorView();
+        if (vp != null) {
+            for (int i = 0; i < vp.getChildCount(); i++) {
+                vp.getChildAt(i).getContext().getPackageName();
+                if (vp.getChildAt(i).getId() != NO_ID && NAVIGATION.equals(activity.getResources().getResourceEntryName(vp.getChildAt(i).getId()))) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 }

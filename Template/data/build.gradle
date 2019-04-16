@@ -33,5 +33,7 @@ dependencies {
     //LitePal 数据库
     compile 'org.litepal.android:java:3.0.0'
 
+    // add for room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
     testCompile 'junit:junit:4.12'
 }
