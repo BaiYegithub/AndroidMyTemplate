@@ -11,8 +11,11 @@ import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
+
+import app.vp.cn.common.util.LogUtil;
 
 /**
  * author : by
@@ -128,7 +131,7 @@ public class WaveView extends View {
         drawCicleBorder(canvas);
         //绘制波浪区域
         drawWavePath(canvas);
-       // drawWave2Path(canvas);
+        // drawWave2Path(canvas);
         //绘制进度文字
         drawProcessText(canvas);
 
@@ -274,5 +277,18 @@ public class WaveView extends View {
      */
     public int getProgress() {
         return progress;
+    }
+
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        LogUtil.i("xxx", "view 的 dispatchTouchEvent返回" +true);
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {   //在onTouchEvent里面返回false 表示交给上层处理
+        LogUtil.i("xxx", "view 的 onTouchEvent返回" + super.onTouchEvent(event));
+        return super.onTouchEvent(event);
     }
 }

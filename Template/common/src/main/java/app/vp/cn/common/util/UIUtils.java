@@ -99,6 +99,7 @@ public class UIUtils {
 
     /**
      * 获取是否存在NavigationBar
+     * 不适合全面屏的判断
      *
      * @return
      */

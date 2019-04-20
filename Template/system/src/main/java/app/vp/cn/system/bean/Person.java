@@ -17,7 +17,6 @@ public class Person implements Parcelable {
         this.mName = mName;
     }
 
-
     protected Person(Parcel in) {
         mName = in.readString(); //这个是一定要写的
     }

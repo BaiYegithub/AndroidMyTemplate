@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 26
     buildToolsVersion "28.0.1"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
@@ -41,7 +41,6 @@ dependencies {
     //RecyclerView 下拉刷新 上拉加载框架
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
 
-    //常用工具类集合
 
     api 'com.android.support:design:26.0.0-alpha1'
 

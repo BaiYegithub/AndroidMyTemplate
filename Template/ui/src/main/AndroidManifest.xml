@@ -20,16 +20,20 @@
         <activity android:name=".RecyclerActivity">
         </activity>
         <activity android:name=".WaveActivity">
+        </activity>
+        <activity
+            android:name=".HtmlEditActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        </activity>
+        <activity android:name=".ViewActivity">
+
+        </activity>
+        <activity android:name=".SurfaceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".HtmlEditActivity"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-
         </activity>
     </application>
 
