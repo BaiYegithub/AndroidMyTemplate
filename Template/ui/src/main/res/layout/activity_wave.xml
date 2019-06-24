@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
     tools:context="app.vp.cn.ui.WaveActivity">
 
     <app.vp.cn.ui.view.WaveView
@@ -21,5 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"/>
+
+    <app.vp.cn.ui.text.VerticalRollingTextView
+        android:id="@+id/verticalRollingView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:animInterval="5000"
+        />
 
 </LinearLayout>
