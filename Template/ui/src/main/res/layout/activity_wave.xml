@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,20 +11,27 @@
         android:id="@+id/waveView"
         android:layout_width="94dp"
         android:layout_height="94dp"
-        android:background="@drawable/bg_ball"/>
+        android:background="@drawable/bg_ball" />
 
     <RatingBar
         android:id="@+id/rtBar_itemCollection"
         style="@style/myRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="32dp" />
 
     <app.vp.cn.ui.text.VerticalRollingTextView
         android:id="@+id/verticalRollingView"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        app:animInterval="5000"
-        />
+        app:animInterval="5000" />
+
+    <app.vp.cn.ui.view.ClockTextView
+        android:id="@+id/tv_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16:32"
+        android:textColor="#000000"
+        android:textSize="30sp" />
 
 </LinearLayout>

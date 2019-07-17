@@ -25,7 +25,7 @@ public class DragListViewActivity extends AppCompatActivity {
         dragListView2.setDragViewId(R.id.iv_drag_list_item_1);
         arrayList = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 40; i++) {
             arrayList.add("我是第" + i + "条数据");
         }
 
