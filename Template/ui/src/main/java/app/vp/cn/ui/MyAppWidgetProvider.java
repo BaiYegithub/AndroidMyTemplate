@@ -43,30 +43,34 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
 
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.layout_widget_skin);
 
-        remoteViews.setTextColor(R.id.tv_clock,BaseApp.getmContext().getResources().getColor(R.color.colorPrimary));
+        remoteViews.setTextColor(R.id.tv_clock, BaseApp.getmContext().getResources().getColor(R.color.colorPrimary));
+
+        remoteViews.setInt(R.id.tv_location,"setMaxLines",1);
+        remoteViews.setInt(R.id.tv_location,"setMaxEms",5);
+        remoteViews.setCharSequence(R.id.tv_clock,"setFormat12Hour","E");
 
         //remoteViews.setViewPadding(R.id.tv_clock,100,100,0,0);
-        remoteViews.setTextViewTextSize(R.id.tv_clock,COMPLEX_UNIT_SP,30 );
+        remoteViews.setTextViewTextSize(R.id.tv_clock, COMPLEX_UNIT_SP, 30);
 
         remoteViews.setImageViewBitmap(R.id.iv_1, translateBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.pic_2), UIUtils.dip2px(BaseApp.getmContext(), 230), UIUtils.dip2px(BaseApp.getmContext(), 12)));
         remoteViews.setImageViewBitmap(R.id.iv_2, translateBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.pic_1), UIUtils.dip2px(BaseApp.getmContext(), 180), UIUtils.dip2px(BaseApp.getmContext(), 65)));
-        remoteViews.setImageViewBitmap(R.id.iv_weather,translateBitmap(BitmapFactory.decodeResource(context.getResources(),R.drawable.weather_103),UIUtils.dip2px(BaseApp.getmContext(),180),UIUtils.dip2px(BaseApp.getmContext(),15)));
+        remoteViews.setImageViewBitmap(R.id.iv_weather, translateBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.weather_103), UIUtils.dip2px(BaseApp.getmContext(), 180), UIUtils.dip2px(BaseApp.getmContext(), 15)));
 
         //设置时间并移动
-        Bitmap timeBitmap = Bitmap.createBitmap( UIUtils.dip2px(BaseApp.getmContext(), 140), UIUtils.dip2px(BaseApp.getmContext(), 50), Bitmap.Config.ARGB_8888);
-        drawText(remoteViews, timeBitmap,R.id.iv_time, UIUtils.dip2px(BaseApp.getmContext(), 50), 1, context.getResources().getColor(R.color.white), "10:58", UIUtils.dip2px(BaseApp.getmContext(), 0),
+        Bitmap timeBitmap = Bitmap.createBitmap(UIUtils.dip2px(BaseApp.getmContext(), 140), UIUtils.dip2px(BaseApp.getmContext(), 50), Bitmap.Config.ARGB_8888);
+        drawText(remoteViews, timeBitmap, R.id.iv_time, UIUtils.dip2px(BaseApp.getmContext(), 50), 1, context.getResources().getColor(R.color.white), "10:58", UIUtils.dip2px(BaseApp.getmContext(), 0),
                 UIUtils.dip2px(BaseApp.getmContext(), 40));
-        remoteViews.setImageViewBitmap(R.id.iv_time,translateBitmap(timeBitmap,UIUtils.dip2px(BaseApp.getmContext(),8),UIUtils.dip2px(BaseApp.getmContext(),18)));
+        remoteViews.setImageViewBitmap(R.id.iv_time, translateBitmap(timeBitmap, UIUtils.dip2px(BaseApp.getmContext(), 8), UIUtils.dip2px(BaseApp.getmContext(), 18)));
 
         Bitmap outBitmap = Bitmap.createBitmap(UIUtils.dip2px(BaseApp.getmContext(), 308), UIUtils.dip2px(BaseApp.getmContext(), 163), Bitmap.Config.ARGB_8888);
 
-        drawText(remoteViews,outBitmap, R.id.iv_bg, UIUtils.dip2px(BaseApp.getmContext(), 14), 1, context.getResources().getColor(R.color.white), "雷阵雨 -28/-16", UIUtils.dip2px(BaseApp.getmContext(), 0),
+        drawText(remoteViews, outBitmap, R.id.iv_bg, UIUtils.dip2px(BaseApp.getmContext(), 14), 1, context.getResources().getColor(R.color.white), "雷阵雨 -28/-16", UIUtils.dip2px(BaseApp.getmContext(), 0),
                 UIUtils.dip2px(BaseApp.getmContext(), 95));
 
-        drawText(remoteViews,outBitmap, R.id.iv_bg,UIUtils.dip2px(BaseApp.getmContext(), 14), 1, context.getResources().getColor(R.color.white), "08/10 星期三", UIUtils.dip2px(BaseApp.getmContext(), 0),
+        drawText(remoteViews, outBitmap, R.id.iv_bg, UIUtils.dip2px(BaseApp.getmContext(), 14), 1, context.getResources().getColor(R.color.white), "08/10 星期三", UIUtils.dip2px(BaseApp.getmContext(), 0),
                 UIUtils.dip2px(BaseApp.getmContext(), 120));
 
-        drawText(remoteViews,outBitmap, R.id.iv_bg,UIUtils.dip2px(BaseApp.getmContext(), 14), 1, context.getResources().getColor(R.color.white), "乌鲁木齐牧试站", UIUtils.dip2px(BaseApp.getmContext(), 0),
+        drawText(remoteViews, outBitmap, R.id.iv_bg, UIUtils.dip2px(BaseApp.getmContext(), 14), 1, context.getResources().getColor(R.color.white), "乌鲁木齐牧试站", UIUtils.dip2px(BaseApp.getmContext(), 0),
                 UIUtils.dip2px(BaseApp.getmContext(), 145));
 
         appWidgetManager.updateAppWidget(new ComponentName(context, MyAppWidgetProvider.class), remoteViews);
@@ -130,7 +134,7 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
         return afterBitmap;
     }
 
-    private void drawText(RemoteViews remoteViews, Bitmap bitmap,int id, float textSize, float strokeWidth, int textColor, String textContent, float xPosition, float yPosition) {
+    private void drawText(RemoteViews remoteViews, Bitmap bitmap, int id, float textSize, float strokeWidth, int textColor, String textContent, float xPosition, float yPosition) {
 
         Canvas canvas = new Canvas(bitmap);
         Paint paint = new TextPaint();
@@ -143,7 +147,7 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
         paint.setTextAlign(Paint.Align.LEFT);
         //注意这里的坐标是文字的偏左下角的位置，baseline 的位置
         canvas.drawText(textContent, xPosition, yPosition, paint);
-        canvas.save(Canvas.ALL_SAVE_FLAG);
+      //  canvas.save(Canvas.ALL_SAVE_FLAG);
         canvas.restore();
         remoteViews.setImageViewBitmap(id, bitmap);
     }

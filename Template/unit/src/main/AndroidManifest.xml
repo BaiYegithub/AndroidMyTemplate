@@ -20,6 +20,7 @@
         <service
             android:name=".service.MyService"
             android:priority="1000"/>
+        <service android:name=".service.MyIntentService"/>
     </application>
 
 </manifest>

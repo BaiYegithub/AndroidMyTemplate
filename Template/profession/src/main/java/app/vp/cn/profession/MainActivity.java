@@ -1,11 +1,15 @@
 package app.vp.cn.profession;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -22,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rcv;
     @BindView(R.id.iv_back)
     ImageView ivBack;
-
+    @BindView(R.id.bt_toUi)
+    Button btToUi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +55,18 @@ public class MainActivity extends AppCompatActivity {
 
         rcv.setRecycledViewPool(new RecyclerView.RecycledViewPool());
 
-
+        btToUi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent();
+                    intent.setAction("wave");
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @OnClick(R.id.iv_back)

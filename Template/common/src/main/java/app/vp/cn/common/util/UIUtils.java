@@ -31,6 +31,18 @@ public class UIUtils {
     private static Toast toast;
 
     /**
+     * 屏幕宽度
+     */
+    public static int getScreenWidth(Context context) {
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        return outMetrics.widthPixels;
+    }
+
+
+    /**
      * dip 转 px
      */
     public static int dip2px(Context context, float dpValue) {

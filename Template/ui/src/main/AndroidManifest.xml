@@ -17,8 +17,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerActivity" />
-        <activity android:name=".WaveActivity">
+        <activity
+            android:name=".WaveActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="wave" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".HtmlEditActivity"
@@ -38,7 +44,8 @@
         </receiver>
 
         <activity android:name=".WidgetConfigActivity" />
-        <activity android:name=".LinearActivity">
+        <activity android:name=".LinearActivity" />
+        <activity android:name=".PathActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

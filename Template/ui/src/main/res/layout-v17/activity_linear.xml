@@ -12,9 +12,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="10sp"
+        android:ellipsize="end"
         android:textColor="@color/colorPrimary"
         />
 
+    <TextClock
+        android:id="@+id/tv_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="E"
+        android:format24Hour="E"
+        android:textColor="@color/colorPrimary"
+        android:tag="widget"
+        android:textSize="14sp"/>
 
     <LinearLayout
         android:id="@+id/ll_left"
