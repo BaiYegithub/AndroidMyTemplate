@@ -46,6 +46,9 @@
         <activity android:name=".WidgetConfigActivity" />
         <activity android:name=".LinearActivity" />
         <activity android:name=".PathActivity">
+
+        </activity>
+        <activity android:name=".ConstraintActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
