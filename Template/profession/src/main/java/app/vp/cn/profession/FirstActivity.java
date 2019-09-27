@@ -1,8 +1,11 @@
 package app.vp.cn.profession;
 
+import android.app.Dialog;
 import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Button;
@@ -10,6 +13,7 @@ import android.widget.Button;
 import app.vp.cn.common.base.BaseActivity;
 import app.vp.cn.common.util.LiveDataBus;
 import app.vp.cn.profession.bean.Person;
+import app.vp.cn.profession.view1.AppUpdateDialog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -18,6 +22,20 @@ public class FirstActivity extends BaseActivity {
 
     @BindView(R.id.bt_toSecond)
     Button btToSecond;
+
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Log.i("isShow", "handleMessage: 接收到了  isFinishing 的值是"+isFinishing());
+            if(!isFinishing()&&appUpdateDialog!=null){
+                Log.i("isShow", "handleMessage: 显示了");
+                appUpdateDialog.show();
+            }
+        }
+    };
+    private AppUpdateDialog appUpdateDialog;
 
     @Override
     protected int initContentView() {
@@ -31,6 +49,9 @@ public class FirstActivity extends BaseActivity {
 
     @Override
     protected void initHttp() {
+        appUpdateDialog = new AppUpdateDialog(this);
+
+        handler.sendEmptyMessageDelayed(0,5000);
 
     }
 
