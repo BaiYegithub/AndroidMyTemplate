@@ -2,6 +2,10 @@ package app.vp.cn.java.bean;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by baiye
@@ -32,5 +36,28 @@ public class genericityTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        //多态的体现,用父类去定义一个子类，然后.getClass().getName()得到的是子类的名称
+        Animal dog = new Dog();
+        String name = dog.getClass().getName();
+        System.out.println(name);
+        //当把一个对象放进集合或者map 中，实际上放进去的是对象的地址，改变这个地址对应的值，集合里的对象也会跟着改变
+        List<Dog> dogList = new ArrayList<>();
+        Dog dog1 = new Dog();
+        dog1.name = "拉布拉多";
+        dogList.add(dog1);
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("dog",dogList);
+
+        List<Dog> dogList2 = (List<Dog>) map.get("dog");
+        Dog dog2 = new Dog();
+        dog2.name = "金毛犬";
+        dogList2.add(dog2);
+
+        List<Dog> dogList3 = (List<Dog>) map.get("dog");
+        System.out.println("dogList3的size 是"+dogList3.size()+"第一个是"+dogList3.get(0).name+
+        "第二个是"+dogList3.get(1).name);
+
     }
 }

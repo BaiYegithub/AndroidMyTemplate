@@ -51,7 +51,7 @@ public class FirstActivity extends BaseActivity {
     protected void initHttp() {
         appUpdateDialog = new AppUpdateDialog(this);
 
-        handler.sendEmptyMessageDelayed(0,5000);
+       // handler.sendEmptyMessageDelayed(0,5000);
 
     }
 

@@ -2,10 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.vp.cn.ui">
 
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" /> <!-- 允许程序收到广播后快速收到下一个广播 -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" /> <!-- 开app的界面后，如果不操作，app保持屏幕常 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" /> <!-- 允许程序调用killBackgroundProcesses(String).方法结束后台进程 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" /> <!-- 允许程序通过WiFi或移动基站的方式获取用户的经纬度信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许程序振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 创建快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> <!-- 删除快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> <!-- 悬浮窗权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 悬浮窗权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" /> <!-- 小部件跳转闹铃页面权限 -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" /> <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 读取手机号权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" /> <!-- 短信接收权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name="app.vp.cn.common.app.BaseApp"
@@ -15,6 +30,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".HorizontalScrollViewActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NestScrollViewActivity">
+
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerActivity" />
         <activity
@@ -31,30 +57,21 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".ViewActivity" />
         <activity android:name=".SurfaceActivity" />
+        <activity android:name=".WidgetConfigActivity" />
+        <activity android:name=".LinearActivity" />
+        <activity android:name=".PathActivity" />
+        <activity android:name=".ConstraintActivity"></activity>
 
         <receiver android:name=".MyAppWidgetProvider">
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/haha_widget" />
-
             <intent-filter>
                 <action android:name="app.vp.cn.common.app.BaseApp.action.CLICK" />
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/haha_widget" />
         </receiver>
-
-        <activity android:name=".WidgetConfigActivity" />
-        <activity android:name=".LinearActivity" />
-        <activity android:name=".PathActivity">
-
-        </activity>
-        <activity android:name=".ConstraintActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

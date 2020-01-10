@@ -5,24 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="app.vp.cn.third.MainActivity">
+    tools:context=".SecondActivity">
 
     <Button
-        android:id="@+id/bt_main"
+        android:id="@+id/bt_toMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:text="点击发送粘性信息" />
+        android:text="跨进程传递给MainActivity" />
 
     <Button
-        android:id="@+id/bt_jump"
+        android:id="@+id/bt_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击跳转到第二个Activity" />
+        android:text="跳转到第三个Activity" />
 
-    <Button
-        android:id="@+id/bt_jumpFour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="点击跳转到第四个Activity" />
+
 </LinearLayout>

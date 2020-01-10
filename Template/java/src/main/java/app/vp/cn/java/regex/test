@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>玩Android - wanandroid.com - 每日推荐优质文章</title>
+
+<meta name="baidu-site-verification" content="AjVAHSzyrE" />
+<meta name="author" content="lmj">
+<meta data-vue-meta="true" data-vmid="keywords" name="keywords" content="玩Android,学Android,wanandroid,xueandroid,Android知识体系,Android开发工具,自定义View"/>
+<meta data-vue-meta="true" data-vmid="description" name="description" content="玩Android是一个每日推荐20~30篇Android优质文章的站点，提供Android常用工具和常用网站，并以知识体系的形式展现所有的文章分类。"/>
+
+<link rel="shortcut icon" href="/resources/image/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/resources/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/jquery.harame.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/pc/dialog.css?v=4" />
+<link rel="stylesheet" type="text/css" href="/resources/css/pc/common.css?v=11" />
+<link rel="stylesheet" type="text/css" href="/resources/css/pc/header.css?v=4" />
+<!-- jieri -->
+<link rel="stylesheet" type="text/css" href="/resources/css/pc/surprise.css" />
+<!-- -->
+<script type="text/javascript" src="/resources/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.harame.js"></script>
+<script type="text/javascript" src="/resources/js/pc/common.js?v=4"></script>
+
+<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<script>
+
+ /* (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6857356622430344",
+    enable_page_level_ads: true
+ }); */
+</script>
+<script type="text/javascript">
+	var basepath = "/";
+	var _debug = true;
+</script>
+<script type="text/javascript">
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?90501e13a75bb5eb3d067166e8d2cad8";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<span style="display: none;" id="basepath">/</span>
+

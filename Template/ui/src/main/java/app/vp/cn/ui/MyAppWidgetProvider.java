@@ -12,6 +12,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.os.SystemClock;
 import android.support.annotation.Px;
 import android.text.StaticLayout;
 import android.text.TextPaint;
@@ -39,7 +40,7 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
         super.onReceive(context, intent);
 
 
-        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+     /*   AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
 
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.layout_widget_skin);
 
@@ -74,7 +75,7 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
                 UIUtils.dip2px(BaseApp.getmContext(), 145));
 
         appWidgetManager.updateAppWidget(new ComponentName(context, MyAppWidgetProvider.class), remoteViews);
-
+*/
       /*  Bitmap textBitmap = Bitmap.createBitmap(UIUtils.dip2px(BaseApp.getmContext(), 260), UIUtils.dip2px(BaseApp.getmContext(), 200), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(textBitmap);
         Paint paint = new TextPaint();
@@ -92,14 +93,14 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
         remoteViews.setImageViewBitmap(R.id.iv_bg, textBitmap);*/
 
 
-       /* if(intent.getAction().equals(CLICK_ACTION)){
+        if(intent.getAction().equals(CLICK_ACTION)){
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     Bitmap srcbBitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.haha);
                     AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
                         RemoteViews remoteViews = new RemoteViews(context.getPackageName(),R.layout.layout_widget);
-                       // remoteViews.setImageViewBitmap(R.id.iv,srcbBitmap);
+                        remoteViews.setImageViewBitmap(R.id.iv,rotateBitmap(context,srcbBitmap,12));
                         Intent intentClick = new Intent();
                         intentClick.setAction(CLICK_ACTION);
                         PendingIntent pendingIntent = PendingIntent.getBroadcast(context,0,intentClick,0);
@@ -108,9 +109,16 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
                         SystemClock.sleep(300);
                 }
             }).start();
-        }*/
+        }
     }
 
+    private Bitmap rotateBitmap(Context context, Bitmap srcbBitmap, float degree) {
+        Matrix matrix = new Matrix();
+        matrix.reset();
+        matrix.setRotate(degree);
+        Bitmap tmpBitmap = Bitmap.createBitmap(srcbBitmap,0,0,srcbBitmap.getWidth(),srcbBitmap.getHeight(),matrix,true);
+        return tmpBitmap;
+    }
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
