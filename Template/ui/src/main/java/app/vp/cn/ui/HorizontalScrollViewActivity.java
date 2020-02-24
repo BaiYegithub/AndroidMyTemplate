@@ -39,5 +39,6 @@ public class HorizontalScrollViewActivity extends AppCompatActivity {
                 customView.setClickData(centerHorizontal.getScrollX(),centerHorizontal.getScrollX()+200,0,centerHorizontal.getHeight(),0,0,getResources().getColor(R.color.colorPrimaryDark));
             }
         });
+
     }
 }
