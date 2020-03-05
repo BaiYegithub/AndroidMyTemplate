@@ -30,17 +30,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HorizontalScrollViewActivity">
-
+        <activity android:name=".GestureDetectorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NestScrollViewActivity">
+        <activity android:name=".HorizontalScrollViewActivity">
 
         </activity>
+        <activity android:name=".NestScrollViewActivity"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerActivity" />
         <activity
@@ -60,7 +60,7 @@
         <activity android:name=".WidgetConfigActivity" />
         <activity android:name=".LinearActivity" />
         <activity android:name=".PathActivity" />
-        <activity android:name=".ConstraintActivity"></activity>
+        <activity android:name=".ConstraintActivity" />
 
         <receiver android:name=".MyAppWidgetProvider">
             <intent-filter>

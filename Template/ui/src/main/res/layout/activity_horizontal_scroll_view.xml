@@ -7,6 +7,9 @@
     android:orientation="vertical"
     tools:context=".HorizontalScrollViewActivity">
 
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
     <FrameLayout
         android:layout_width="100dp"
         android:layout_height="29dp"
