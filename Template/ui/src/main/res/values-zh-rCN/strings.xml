@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Ui</string>
 
-    <string name="show_text">this is the text</string>
+    <string name="show_text">这是文字</string>
 </resources>
