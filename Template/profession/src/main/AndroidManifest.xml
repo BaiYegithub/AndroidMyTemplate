@@ -13,7 +13,13 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".CropActivity" />
+        <activity android:name=".CropActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ChouTiActivity" />
         <activity android:name=".PresenterActivity" />
         <activity android:name=".HandlerThreadActivity" />
@@ -21,11 +27,7 @@
         <activity android:name=".DragListActivity" />
         <activity android:name=".DragSortListActivity" />
         <activity android:name=".FirstActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"></activity>
     </application>

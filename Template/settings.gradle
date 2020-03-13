@@ -1,1 +1,1 @@
-include ':app', ':appk', ':common', ':java', ':framework', ':materialdesign', ':unit', ':data', ':mixed', ':smalllibrary', ':frame', ':third', ':profession', ':system', ':safety', ':ui', ':client', ':utils'
+include ':app', ':appk', ':common', ':java', ':framework', ':materialdesign', ':unit', ':data', ':mixed', ':smalllibrary', ':frame', ':third', ':profession', ':system', ':safety', ':ui', ':client', ':utils', ':components'

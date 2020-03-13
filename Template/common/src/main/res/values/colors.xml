@@ -8,4 +8,5 @@
 
     <color name="basic_background">#F8F8F8</color>
     <color name="firstGray">#999999</color>
+    <color name="firstGray30">#33999999</color>
 </resources>

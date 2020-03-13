@@ -2,10 +2,15 @@ package app.vp.cn.mixed;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         //是否支持多窗口
         wbSettings.setSupportMultipleWindows(false);
-        wb.loadUrl("https://www.baidu.com/?tn=93153557_hao_pg");
+        wb.loadUrl("https://cpu.baidu.com/1022/cddee177/i/detail/60666953476/video?from=list&scid=48303");
 
         //清除当前webview 访问的历史记录
         // wb.clearHistory();
@@ -51,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         //保存网页（.html）到指定文件  提前新建文件
         wb.saveWebArchive(getExternalCacheDir().getAbsolutePath());
 
+        wb.setWebViewClient(new MyWebViewClient());
+
+        wb.setWebChromeClient(new MyWebChromeClient());
 
         //与js 进行交互  在网页中通过 android.say 调用  可以添加多个，并可以移除
         wb.addJavascriptInterface(new JSONOBJECT(), "android");
@@ -88,6 +96,21 @@ public class MainActivity extends AppCompatActivity {
             ((ViewGroup) wb.getParent()).removeView(wb);
             wb.destroy();
             wb = null;
+        }
+    }
+
+    private class MyWebViewClient extends WebViewClient{
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+            return true;
+        }
+    }
+
+    private class MyWebChromeClient extends WebChromeClient{
+        @Override
+        public void onShowCustomView(View view, CustomViewCallback callback) {
+            super.onShowCustomView(view, callback);
+            Log.i("bai", "onShowCustomView: ");
         }
     }
 }
