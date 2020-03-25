@@ -3,12 +3,18 @@ package app.vp.cn.profession;
 import android.app.Dialog;
 import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import app.vp.cn.common.base.BaseActivity;
 import app.vp.cn.common.util.LiveDataBus;
@@ -22,6 +28,8 @@ public class FirstActivity extends BaseActivity {
 
     @BindView(R.id.bt_toSecond)
     Button btToSecond;
+    @BindView(R.id.bt_saveStringSet)
+            Button btSave;
 
 
     Handler handler = new Handler(){
@@ -45,6 +53,26 @@ public class FirstActivity extends BaseActivity {
     @Override
     protected void initViewAndData() {
 
+        btSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences spBai = getSharedPreferences("bai", MODE_PRIVATE);
+                SharedPreferences.Editor edit = spBai.edit();
+                Set<String> defaultSet = new HashSet<>();
+                Set<String> la = spBai.getStringSet("la", defaultSet);
+                if(!la.contains("a")){
+                    Set<String> saveSet = new HashSet<>();
+                    saveSet.add("a");
+                    Iterator<String> iterator = la.iterator();
+                    if(iterator!=null&&iterator.hasNext()){
+                        saveSet.add(iterator.next());
+                    }
+                    edit.putStringSet("la",saveSet);
+                    edit.commit();
+                }
+            }
+        });
+
     }
 
     @Override
@@ -52,6 +80,7 @@ public class FirstActivity extends BaseActivity {
         appUpdateDialog = new AppUpdateDialog(this);
 
        // handler.sendEmptyMessageDelayed(0,5000);
+
 
     }
 

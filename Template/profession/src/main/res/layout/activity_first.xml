@@ -13,4 +13,10 @@
         android:layout_height="wrap_content"
         android:text="toSecond"/>
 
+    <Button
+        android:id="@+id/bt_saveStringSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存StringSet"/>
+
 </LinearLayout>

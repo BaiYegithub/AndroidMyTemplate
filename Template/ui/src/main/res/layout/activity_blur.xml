@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BlurActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来呀哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fram_acBlur"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginTop="100dp">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="好人"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fram_ac"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_below="@id/fram_acBlur">
+
+        <ImageView
+            android:id="@+id/iv_bg_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="坏人"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -127,8 +127,8 @@ public class CropActivity extends BaseActivity {
         intent.setDataAndType(uri, "image/*");
         intent.putExtra("crop", "true");
         // 裁剪框的比例，1：1
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
+        intent.putExtra("aspectX", 2);
+        intent.putExtra("aspectY", 5);
         // 裁剪后输出图片的尺寸大小
         intent.putExtra("outputX", 250);
         intent.putExtra("outputY", 250);

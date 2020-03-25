@@ -30,17 +30,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InternationalizationActivity">
+        <activity android:name=".BlurActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GestureDetectorActivity">
+        <activity android:name=".CoordinatorLayoutActivity">
 
         </activity>
-        <activity android:name=".HorizontalScrollViewActivity"></activity>
+        <activity android:name=".InternationalizationActivity"></activity>
+        <activity android:name=".GestureDetectorActivity" />
+        <activity android:name=".HorizontalScrollViewActivity" />
         <activity android:name=".NestScrollViewActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerActivity" />
