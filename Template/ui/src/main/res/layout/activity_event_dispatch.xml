@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.vp.cn.ui.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EventDispatchActivity">
+
+    <ImageView
+        android:id="@+id/iv_acEventDispatch"
+        android:layout_width="300dp"
+        android:layout_height="500dp"/> />
+
+    <app.vp.cn.ui.view.MyHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/firstGray30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <app.vp.cn.ui.view.MyTextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="横向滑动我吧"
+                android:textColor="@color/colorAccent" />
+
+            <app.vp.cn.ui.view.MyTextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="横向滑动我吧"
+                android:textColor="@color/colorAccent" />
+
+            <app.vp.cn.ui.view.MyTextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="横向滑动我吧"
+                android:textColor="@color/colorAccent" />
+
+            <app.vp.cn.ui.view.MyTextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="横向滑动我吧"
+                android:textColor="@color/colorAccent" />
+
+            <app.vp.cn.ui.view.MyTextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="横向滑动我吧"
+                android:textColor="@color/colorAccent" />
+
+            <app.vp.cn.ui.view.MyTextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="横向滑动我吧"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </app.vp.cn.ui.view.MyHorizontalScrollView>
+
+    <app.vp.cn.ui.view.MyTextView
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:text="横向滑动我吧"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"/>
+
+
+</app.vp.cn.ui.view.MyLinearLayout>
