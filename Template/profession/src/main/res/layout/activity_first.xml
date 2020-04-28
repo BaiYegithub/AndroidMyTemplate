@@ -11,12 +11,16 @@
         android:id="@+id/bt_toSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="toSecond"/>
+        android:text="toSecond" />
 
     <Button
         android:id="@+id/bt_saveStringSet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="保存StringSet"/>
+        android:text="保存StringSet" />
 
+    <ImageView
+        android:id="@+id/iv_glide"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
 </LinearLayout>

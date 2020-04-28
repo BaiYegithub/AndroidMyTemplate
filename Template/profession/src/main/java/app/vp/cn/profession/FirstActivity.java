@@ -11,12 +11,14 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 import app.vp.cn.common.base.BaseActivity;
+import app.vp.cn.common.util.GlideUtil;
 import app.vp.cn.common.util.LiveDataBus;
 import app.vp.cn.profession.bean.Person;
 import app.vp.cn.profession.view1.AppUpdateDialog;
@@ -29,7 +31,10 @@ public class FirstActivity extends BaseActivity {
     @BindView(R.id.bt_toSecond)
     Button btToSecond;
     @BindView(R.id.bt_saveStringSet)
-            Button btSave;
+    Button btSave;
+
+    @BindView(R.id.iv_glide)
+    ImageView ivGlide;
 
 
     Handler handler = new Handler(){
@@ -72,6 +77,9 @@ public class FirstActivity extends BaseActivity {
                 }
             }
         });
+
+        String url = "http://imgservicepa.suning.cn/uimg1/b2c/image/-SlsxoOKsWa1aahASHQCLQ.jpg_720h_1280w_4e_0l?tdsourcetag=s_pctim_aiomsg";
+        GlideUtil.setImageTiling(ivGlide,url,R.drawable.common_loading3_0);
 
     }
 
