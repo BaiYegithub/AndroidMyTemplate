@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         butterknife.ButterKnife.bind(this);
         //使用ViewStub 控制布局按需加载 显示的方法
-    /*    ViewStub viewStub = findViewById(R.id.stub_import);
+        ViewStub viewStub = findViewById(R.id.stub_import);
         viewStub.setVisibility(View.VISIBLE);
-        viewStub.setVisibility(View.GONE);*/
+        viewStub.setVisibility(View.GONE);
 
         //这里给输入框加入了一个限制，输入内容不能大于4个字节  （意思是汉字不能多于两个，英文字母不能多于4个）
         et_main.setFilters(new InputFilter[]{new EnglishCharFilter(4)});
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 layoutParams.setMargins(0, 0, 0, heightDifference);
 
-                // hs_acWrite.setLayoutParams(layoutParams);
+//                 hs_acWrite.setLayoutParams(layoutParams);
             }
         });
 

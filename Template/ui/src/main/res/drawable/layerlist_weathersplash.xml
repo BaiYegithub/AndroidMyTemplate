@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="130dp">
+        <bitmap android:src="@drawable/weather_splash" />
+    </item>
+
+    <item
+        android:height="130dp">
+        <shape
+            android:gravity="bottom|center_horizontal"
+            android:shape="rectangle">
+            <solid android:color="@color/colorAccent" />
+            <size android:height="130dp"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="33dp">
+        <bitmap
+            android:gravity="center_horizontal|bottom"
+            android:src="@drawable/iv_splash_logo" />
+    </item>
+</layer-list>

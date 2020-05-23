@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/iv_acEventDispatch"
-        android:layout_width="300dp"
-        android:layout_height="500dp"/> />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layerlist_weathersplash"/> />
 
     <app.vp.cn.ui.view.MyHorizontalScrollView
         android:layout_width="match_parent"

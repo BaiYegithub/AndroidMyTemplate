@@ -28,11 +28,11 @@ public class EventDispatchActivity extends AppCompatActivity {
         String yyyyMMdd1 = DateUtil.getDateToString(timeInMillis, "yyyyMMdd");
         Log.i("bai", "onCreate: "+yyyyMMdd1);
 
-        TransitionDrawable drawable = (TransitionDrawable) ContextCompat.getDrawable(this, R.drawable.transition_drawable);
-
-        drawable.startTransition(4000);
+//        TransitionDrawable drawable = (TransitionDrawable) ContextCompat.getDrawable(this, R.drawable.transition_drawable);
+//
+//        drawable.startTransition(4000);
         ImageView ivAcEvent = findViewById(R.id.iv_acEventDispatch);
-        ivAcEvent.setBackground(drawable);
+//        ivAcEvent.setBackground(drawable);
     }
 
     @Override
