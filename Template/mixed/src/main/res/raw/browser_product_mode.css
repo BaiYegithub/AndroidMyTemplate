@@ -1,0 +1,14 @@
+
+html,div,span,body,link,textarea,select,input,option,optgroup button,tr,nav,aside,applet,object,tr,h1,h2,h3,h4,h5,h6,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,p,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,th,td,main{
+	background-color: rgba(211,228,211,0.8) !important;
+	color: #323a24 !important;
+	border-color: #ffffffff !important;
+	/*border-color: #323a24 !important;*/
+	/* text-shadow: 0 0 0 #000; 去掉文本的阴影效果*/
+ }
+ select{
+    background-color: rgba(211,228,211,0.8) !important;
+ 	color: #323a24 !important;
+ 	border-color: #555555 !important;
+ }
+

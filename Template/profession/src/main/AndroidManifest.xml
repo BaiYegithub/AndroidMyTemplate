@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.vp.cn.profession">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="app.vp.cn.common.app.BaseApp"
         android:allowBackup="true"
@@ -10,26 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".CropActivity" >
-
-        </activity>
-        <activity android:name=".ChouTiActivity" />
-        <activity android:name=".PresenterActivity" />
-        <activity android:name=".HandlerThreadActivity" />
-        <activity android:name=".DragListViewActivity" />
-        <activity android:name=".DragListActivity" />
-        <activity android:name=".DragSortListActivity" />
-        <activity android:name=".FirstActivity" >
+        <activity android:name=".RequestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".SpActivity">
+
+        </activity>
+        <activity android:name=".DatePickerActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CropActivity" />
+        <activity android:name=".ChouTiActivity" />
+        <activity android:name=".PresenterActivity" />
+        <activity android:name=".HandlerThreadActivity" />
+        <activity android:name=".DragListViewActivity" />
+        <activity android:name=".DragListActivity" />
+        <activity android:name=".DragSortListActivity" />
+        <activity android:name=".FirstActivity" />
+        <activity android:name=".SecondActivity" />
     </application>
 
 </manifest>

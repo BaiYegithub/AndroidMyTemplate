@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PracticalRecyclerView">
+        <attr name="empty_layout" format="reference"/>
+        <attr name="error_layout" format="reference"/>
+        <attr name="nonet_layout" format="reference"/>
+        <attr name="loading_layout" format="reference"/>
+        <attr name="load_more_layout" format="reference"/>
+        <attr name="no_more_layout" format="reference"/>
+        <attr name="load_more_failed_layout" format="reference"/>
+        <attr name="no_location_layout" format="reference"/>
+    </declare-styleable>
+
+    <array name="zhouX">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </array>
+    <declare-styleable name="MonthCalendarView">
+        <attr name="month_selected_text_color" format="color" />
+        <attr name="month_selected_circle_color" format="color" />
+        <attr name="month_selected_circle_today_color" format="color" />
+        <attr name="month_normal_text_color" format="color" />
+        <attr name="month_today_text_color" format="color" />
+        <attr name="month_lunar_text_color" format="color" />
+        <attr name="month_hint_circle_color" format="color" />
+        <attr name="month_holiday_color" format="color" />
+        <attr name="month_last_or_next_month_text_color" format="color" />
+        <attr name="month_last_or_next_lunar_text_color" format="color" />
+        <attr name="month_day_text_size" format="integer" />
+        <attr name="month_day_lunar_text_size" format="integer" />
+        <attr name="month_show_task_hint" format="boolean" />
+        <attr name="month_show_lunar" format="boolean" />
+        <attr name="month_show_holiday_hint" format="boolean" />
+        <attr name="month_count" format="integer" />
+        <attr name="month_holiday_padding" format="integer" />
+        <attr name="month_text_rest_color" format="color" />
+        <attr name="month_text_work_color" format="color" />
+        <attr name="month_text_rest_size" format="integer" />
+        <attr name="month_hint_circle_radius" format="integer" />
+
+    </declare-styleable>
+
+</resources>

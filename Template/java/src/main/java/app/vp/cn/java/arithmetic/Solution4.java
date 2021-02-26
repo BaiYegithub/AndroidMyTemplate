@@ -21,4 +21,33 @@ public class Solution4 {
         }
         return 0;
     }
+    //回文数判断
+    public boolean isPalindrome(Node headNode){
+        if(headNode==null||headNode.next==null){
+            return true;
+        }
+        Node pre = null;
+        Node fast = headNode;
+        Node slow = headNode;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            Node next = slow.next;
+            slow.next = pre;
+            pre = slow;
+            slow = next;
+        }
+
+        if(fast!=null){
+            slow = slow.next;
+        }
+        while (slow!=null){
+            if(slow.data != pre.data){
+                return false;
+            }
+            slow = slow.next;
+            pre = pre.next;
+        }
+        return true;
+    }
 }

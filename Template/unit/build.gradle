@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply from:'version.gradle'
 android {
     compileSdkVersion 26
     buildToolsVersion "28.0.1"
@@ -20,7 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -31,4 +34,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile project(':common')
     testCompile 'junit:junit:4.12'
+}
+task ex52PrintlnTask  {
+    println "App版本是:${versionName},版本号是:${versionCode}"
 }

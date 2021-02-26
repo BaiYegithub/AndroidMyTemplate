@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+    <!-- @dimen/height_54 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_text_red_mid"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/txtWhite16"
+                android:layout_centerVertical="true"
+                android:text="选择日期" />
+
+            <RadioGroup
+                android:id="@+id/rgSelect"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:padding="0.5dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rbDate"
+                    style="@style/radioBtnSwithRedWht"
+                    android:checked="true"
+                    android:tag="0"
+                    android:text="日期" />
+
+                <RadioButton
+                    android:id="@+id/rbTime"
+                    style="@style/radioBtnSwithRedWht"
+                    android:tag="1"
+                    android:text="时间" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llyDescr"
+            style="@style/fill_wrap"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvTitleDesc1"
+                style="@style/txtWhite"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvTitleDesc2"
+                style="@style/txtWhite"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvTitleDesc3"
+                style="@style/txtWhite"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- <View
+        style="@style/lineStyleRed"/> -->
+    <include layout="@layout/include_dialog_bottom" />
+</LinearLayout>

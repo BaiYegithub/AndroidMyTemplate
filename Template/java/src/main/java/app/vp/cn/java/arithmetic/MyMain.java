@@ -15,5 +15,22 @@ public class MyMain {
         Solution4 solution4 = new Solution4();
         int i = solution4.largestPerimeter(a);
         System.out.println(i);
+
+        Node headNode = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(2);
+        Node node5 = new Node(1);
+
+        headNode.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+
+        node4 = node4.next;
+        boolean palindrome = solution4.isPalindrome(headNode);
+        System.out.print("是不是回文字符串"+palindrome);
+
+
     }
 }

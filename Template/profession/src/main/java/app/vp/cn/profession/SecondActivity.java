@@ -2,6 +2,7 @@ package app.vp.cn.profession;
 
 import android.arch.lifecycle.Observer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
@@ -30,7 +31,20 @@ public class SecondActivity extends BaseActivity {
 
     @Override
     protected void initViewAndData() {
-
+        btClick2.setText("我是原来的数据");
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(SecondActivity.this!=null){
+                            btClick2.setText("klsjdaflk");
+                        }
+                    }
+                });
+            }
+        },5000);
     }
 
     @Override

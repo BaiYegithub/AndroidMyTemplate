@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+        <FrameLayout
+            android:id="@+id/wheelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_gravity="center_vertical"
+            />
+        <include layout="@layout/include_dialog_btn_bottom"/>
+</merge>

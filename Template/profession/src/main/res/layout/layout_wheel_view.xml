@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingLeft="@dimen/padding_24"
+    android:paddingStart="@dimen/padding_24"
+    android:paddingEnd="@dimen/padding_24"
+    android:paddingRight="@dimen/padding_24"
+    android:paddingTop="@dimen/padding_default"
+    android:paddingBottom="@dimen/padding_default"
+    >
+    <app.vp.cn.profession.timePicker.WheelView
+        android:visibility="gone"
+        android:id="@+id/year"
+        style="@style/hItem"
+        android:layout_weight="3" />
+
+    <app.vp.cn.profession.timePicker.WheelView
+        android:id="@+id/month"
+        style="@style/hItem"
+        android:layout_weight="2" />
+
+    <app.vp.cn.profession.timePicker.WheelView
+        android:id="@+id/day"
+        style="@style/hItem"
+        android:layout_weight="2" />
+	<!--<TextView
+		android:id="@+id/tvMargin"
+		android:visibility="gone"
+		style="@style/hItem"
+		android:gravity="center"
+		android:text=""
+		/>-->
+    <!--<app.vp.cn.profession.timePicker.WheelView
+        android:id="@+id/week"
+        android:visibility="gone"
+        style="@style/wrap_wrap"
+        android:gravity="center_vertical|right"
+        />-->
+        <LinearLayout
+            android:id="@+id/llyHour"
+            style="@style/hItem"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <app.vp.cn.profession.timePicker.WheelView
+            android:id="@+id/hour"
+            style="@style/fill_wrap"
+            android:gravity="center"
+             />
+            <TextView
+            android:id="@+id/tvHour"
+            style="@style/txtBlark20"
+            android:gravity="center"
+            android:text="时"
+            /><!-- android:paddingBottom="@dimen/padding_default" -->
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvSign"
+            android:visibility="gone"
+            style="@style/txtBlark20"
+            android:gravity="center"
+            android:text=":"
+            /><!--android:layout_width="30dp"-->
+        <LinearLayout
+            android:id="@+id/llyMinute"
+            style="@style/hItem"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <app.vp.cn.profession.timePicker.WheelView
+            android:id="@+id/minute"
+            style="@style/fill_wrap"
+            android:gravity="center"
+            />
+            <TextView
+            android:id="@+id/tvMinute"
+            style="@style/txtBlark20"
+            android:gravity="center"
+            android:text="分"
+            /><!--  android:paddingBottom="@dimen/padding_default" -->
+        </LinearLayout>
+</LinearLayout>

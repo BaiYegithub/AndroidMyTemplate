@@ -1,37 +1,27 @@
 package app.vp.cn.ui;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import app.vp.cn.common.util.LogUtil;
-import app.vp.cn.ui.bean.SkinInfo;
 import app.vp.cn.ui.text.DataSetAdapter;
 import app.vp.cn.ui.text.VerticalRollingTextView;
-import app.vp.cn.ui.utils.XmlUtils;
 import app.vp.cn.ui.utils.ZipUtils;
 import app.vp.cn.ui.view.WaveView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
 
 public class WaveActivity extends AppCompatActivity {
 
@@ -43,6 +33,12 @@ public class WaveActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_text1)
     TextView tv;
+
+    @BindView(R.id.tv_acWave)
+    TextView tvAcWave;
+
+    private List<String> mDataSet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,21 +47,35 @@ public class WaveActivity extends AppCompatActivity {
 
         waveView.setProgress(20);
 
-        List<String> mDataSet = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
-            mDataSet.add("大魔王是 123..... 购买3年VIP会员 15:12:13"+i);
-        }
+        mDataSet = new ArrayList<>();
+        Observable.interval(0, 10, TimeUnit.SECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long aLong) throws Exception {
+                        Log.i("bai", "accept: 接收aLong"+aLong);
+                        if(aLong%2==0){
+                            verticalRollingTextView.setText("天体那都需要你看得见飞快点快点快点开房间啊");
+                        }else {
+                            verticalRollingTextView.setText("没有什么能够阻挡");
+                        }
+                        mDataSet.add(verticalRollingTextView.getText().toString()+aLong);
 
-        verticalRollingTextView.setDataSetAdapter(new DataSetAdapter<String>(mDataSet) {
+                        verticalRollingTextView.run();
+                    }
+                });
+
+        DataSetAdapter dataSetAdapter =  new DataSetAdapter<String>(mDataSet) {
 
             @Override
-            protected String text(String charSequence) {
-                return charSequence;
+            protected CharSequence text(String s) {
+                return s;
             }
-        });
+        };
+        verticalRollingTextView.setDataSetAdapter(dataSetAdapter);
 
-        verticalRollingTextView.run();
+        tvAcWave.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         try {
             ZipUtils.UnZipFolder("/storage/emulated/0/Android/data/com.lu.ashionweatherbanner/files/Pictures/ashionskin.zip","/storage/emulated/0/Android/data/com.lu.ashionweatherbanner/files/Pictures");
@@ -135,5 +145,7 @@ public class WaveActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
+
+        Toast.makeText(WaveActivity.this,"这是我弹出的toast",Toast.LENGTH_LONG).show();
     }
 }

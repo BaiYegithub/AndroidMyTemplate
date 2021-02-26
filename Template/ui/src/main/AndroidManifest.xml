@@ -30,24 +30,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EventDispatchActivity">
-
-        </activity>
-        <activity android:name=".BlurActivity"></activity>
-        <activity android:name=".CoordinatorLayoutActivity"></activity>
-        <activity android:name=".InternationalizationActivity" />
-        <activity android:name=".GestureDetectorActivity">
-
-        </activity>
-        <activity android:name=".HorizontalScrollViewActivity" />
-        <activity android:name=".NestScrollViewActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".ConstraintLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RecyclerViewActivity">
+
+        </activity>
+        <activity android:name=".ScrollOverActivity" />
+        <activity android:name=".ScrollViewActivity" >
+
+
+        </activity>
+        <activity android:name=".EventDispatchActivity" />
+        <activity android:name=".BlurActivity" />
+        <activity android:name=".CoordinatorLayoutActivity" />
+        <activity android:name=".InternationalizationActivity" />
+        <activity android:name=".GestureDetectorActivity" />
+        <activity android:name=".HorizontalScrollViewActivity" />
+        <activity android:name=".NestScrollViewActivity" />
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".RecyclerActivity" />
         <activity
             android:name=".WaveActivity"

@@ -13,5 +13,91 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
+    <!-- style -->
+    <style name="dialog_style" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/color_dialog_bg</item>
+        <!-- <item name="android:windowAnimationStyle">@style/DialogAnimation</item> -->
+    </style>
+
+    <style name="wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="txtWhite16" parent="wrap_wrap">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="hItem_wrap">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--RadioButton样式-->
+    <style name="radioBtnDefault" parent="hItem_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="radioBtnSwithRedWht" parent="radioBtnDefault">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/btn_sel_white_or_red</item>
+        <item name="android:textColor">@drawable/txt_sel_red_or_white</item>
+    </style>
+
+    <style name="fill_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="txtWhite" parent="txtWhite16">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!-- 线条 -->
+    <style name="lineHeightDot5Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+    <!-- 线条item -->
+    <style name="lineStyle" parent="lineHeightDot5Style">
+        <item name="android:background">@color/color_line_ee</item>
+    </style>
+
+    <!-- 布局样式 -->
+    <style name="hItem">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="txtNormal16_hItem" parent="@style/hItem">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+    <style name="lineStyle_v" parent="lineHeightDot5Style">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_line_ee</item>
+    </style>
+
+    <style name="txtRed16_hItem" parent="@style/hItem">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/color_text_red_mid</item>
+    </style>
+
+    <style name="txtBlark" parent="wrap_wrap">
+        <item name="android:textSize">@dimen/textsize_16</item>
+        <item name="android:textColor">@color/color_text_black44</item>
+    </style>
+
+    <style name="txtBlark20" parent="txtBlark">
+        <item name="android:textSize">@dimen/textsize_20</item>
+    </style>
+    <declare-styleable name="DatePicker">
+        <attr name="picker_text_color" format="color" />
+        <attr name="picker_select_textColor" format="color" />
+        <attr name="picker_split" format="color" />
+        <attr name="picker_split_height" format="dimension" />
+    </declare-styleable>
 
 </resources>

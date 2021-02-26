@@ -3,4 +3,38 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="color_dialog_bg">#33000000</color>
+    <color name="color_text_red_mid">#e84c3d</color>
+    <color name="color_line_ee">#eeeeee</color>
+    <color name="color_text">#bbbbbb</color><!--内容 正常 灰白-->
+    <color name="color_text_hint">#aaaaaa</color><!--内容 正常 灰白-->
+
+    <!--1.4开始，统一字体颜色-->
+    <color name="color_normal_day">#333333</color>
+    <color name="color_select_day">#333333</color>
+    <color name="color_select_day_bg">#e84c3d</color>
+    <color name="color_current_day">#ffffff</color>
+    <color name="color_circle">#35aeff</color>
+    <color name="color_circle_current">#ffffff</color>
+    <color name="color_circle_80">#8035aeff</color>
+    <color name="color_lunar_text_44">#444444</color>
+    <color name="color_lunar_text_bb">#bbbbbb</color>
+    <color name="color_holiday_text">#e84c3d</color>
+    <color name="color_work_text">#e84c3d</color>
+    <color name="color_work_text_80">#80e84c3d</color>
+    <color name="color_rest_text">#24a44f</color>
+    <color name="color_rest_text_80">#8024a44f</color>
+
+    <color name="color_weedEnd_text">#e84c3d</color>
+    <color name="color_weedEnd_text_80">#80e84c3d</color>
+
+
+    <color name="bg_red_ee2a1a">#ee2a1a</color>
+    <color name="bg_red_e84c3d">#e84c3d</color>
+
+    <color name="color_red_e84c3d">#e84c3d</color>
+    <color name="color_blue_35aeff">#35aeff</color>
+
+    <color name="color_text_black44">#444444</color><!-- 底部导航栏 -->
 </resources>

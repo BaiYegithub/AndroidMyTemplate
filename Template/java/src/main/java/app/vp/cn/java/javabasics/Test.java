@@ -45,11 +45,11 @@ public class Test {
         studentHashSet.add(libai);
         studentHashSet.add(LiBai);
 
-        System.out.printf("studentHashSet 的数量" + studentHashSet.size());
+//        System.out.printf("studentHashSet 的数量" + studentHashSet.size());
 
-
-
-
+        String str = "012345";
+        int charAt = str.charAt(1) - '6';
+        System.out.printf("studentHashSet 的数量 charAt 是"+charAt );
 
     }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,27 +14,199 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inflatedId="@+id/ll_root"
-        android:layout="@layout/layout_tv"/>
+        android:layout="@layout/layout_tv" />
 
     <Button
         android:id="@+id/bt_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="显示"/>
+        android:text="显示" />
 
     <Button
         android:id="@+id/tv_hide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="隐藏"/>
+        android:text="隐藏" />
 
     <EditText
         android:id="@+id/et_acMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
+    <!-- <app.vp.cn.ui.view.FlowLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="纤云弄巧"
+             android:layout_margin="15dp"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="飞星传恨"
+             android:layout_margin="15dp"
+             android:textSize="14dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="银汉迢迢暗渡"
+             android:textSize="16dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="金风玉露一相逢"
+             android:textSize="18dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="便胜却人间无数"
+             android:textSize="20dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="来历"
+             android:textSize="22dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="滴滴滴多"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="啦啦啦啦"
+             android:textSize="12dp" />
+
+
+     </app.vp.cn.ui.view.FlowLayout>-->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_acMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable">
+
+    </android.support.design.widget.TabLayout>
+
+    <TextView
+        android:id="@+id/tv_acMain"
+        android:layout_width="200dp"
+        android:layout_height="50dp" />
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoStart="true"
+        android:layout_gravity="center_horizontal"
+        android:flipInterval="5000"
+        android:background="@drawable/bg_weather_top_ad_banner"
+        android:inAnimation="@anim/right_in"
+        android:outAnimation="@anim/left_out"
+        android:persistentDrawingCache="animation"></ViewFlipper>
+
+    <app.vp.cn.ui.view.MarqueeText
+        android:id="@+id/tv_text_acMain"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:scrollbarFadeDuration="3000"
+        android:gravity="center"
+        android:text="没有什么能够阻挡，"
+        android:textColor="@color/white"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/bt_toWaveAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到waveActivity"/>
+    <RelativeLayout
+        android:id="@+id/rlv_ib_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_splash_logo"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_logo_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp" />
+
+    <!--<app.vp.cn.ui.view.EraserView_SRCOUT
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+    <app.vp.cn.ui.view.CustomFrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"/>
+
+
+    </app.vp.cn.ui.view.CustomFrameLayout>
 
 </LinearLayout>

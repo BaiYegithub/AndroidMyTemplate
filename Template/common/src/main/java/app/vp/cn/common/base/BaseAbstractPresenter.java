@@ -33,6 +33,7 @@ public class BaseAbstractPresenter<T extends BaseView> implements BasePresenter,
             compositeDisposable.dispose();
             LogUtil.i("生命周期","清空资源，走了onDestroy 方法");
         }
+        mView=null;
         lifecycleOwner.getLifecycle().removeObserver(this);
     }
 

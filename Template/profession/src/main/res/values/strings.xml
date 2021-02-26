@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Profession</string>
+
+    <string name="label_cancel">取消</string>
+    <string name="label_year_of_week">[%1$s周]</string>
+
 </resources>

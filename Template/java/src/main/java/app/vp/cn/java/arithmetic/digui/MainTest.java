@@ -26,5 +26,12 @@ public class MainTest {
         Rob2 rob2 = new Rob2();
         int rob3 = rob2.rob(num);
         System.out.println("在收尾连接的房屋中小偷可以偷到的最多的钱是" + rob3);
+
+        StairSolution stairSolution = new StairSolution();
+        int stair = stairSolution.stair(10);
+
+        int stair2 = stairSolution.stair2(10);
+
+        System.out.print("第一种解法stair是" + stair + "第二种解法stair2是" + stair2);
     }
 }

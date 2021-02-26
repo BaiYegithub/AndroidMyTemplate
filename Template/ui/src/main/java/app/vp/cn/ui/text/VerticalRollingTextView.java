@@ -62,7 +62,7 @@ public class VerticalRollingTextView extends TextView {
 
     private boolean isRunning;
     /*动画时间*/
-    private int mDuration = 5000;
+    private int mDuration = 1000;
     /*动画间隔*/
     private int mAnimInterval = 5000;
 
@@ -92,6 +92,7 @@ public class VerticalRollingTextView extends TextView {
 
     public VerticalRollingTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setLayerType(View.LAYER_TYPE_SOFTWARE,null);
         parseAttrs(context, attrs, defStyleAttr);
     }
 
@@ -337,12 +338,12 @@ public class VerticalRollingTextView extends TextView {
         }
     };
 
-    @Override
+    /*@Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         removeCallbacks(mRollingTask);
         if (null != mAnim && mAnim.isRunning()) mAnim.cancel();
-    }
+    }*/
 
     public void setItemCount(int itemCount) {
         this.itemCount = itemCount;
