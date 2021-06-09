@@ -2,21 +2,16 @@ package app.vp.cn.java;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import java.lang.ref.WeakReference;
 
-import app.vp.cn.java.arithmetic.TraverseView;
 import app.vp.cn.java.bean.Dog;
 import app.vp.cn.java.bean.User;
 import app.vp.cn.java.reference.SetUser;
 import app.vp.cn.java.reference.SetUserReference;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 

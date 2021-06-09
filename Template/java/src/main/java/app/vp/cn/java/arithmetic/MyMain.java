@@ -32,5 +32,8 @@ public class MyMain {
         System.out.print("是不是回文字符串"+palindrome);
 
 
+        if((1&1)!=0){
+            System.out.print("(1&1)!=0");
+        }
     }
 }

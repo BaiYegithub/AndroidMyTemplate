@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
@@ -30,4 +31,13 @@ dependencies {
     compile 'com.android.support:appcompat-v7:28.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //协程
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    //lifecycle-viewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-rc01"
+}
+repositories {
+    mavenCentral()
 }

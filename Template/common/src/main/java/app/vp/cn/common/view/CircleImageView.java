@@ -1,4 +1,4 @@
-package app.vp.cn.common.view;
+ package app.vp.cn.common.view;
 
 
 import android.content.Context;

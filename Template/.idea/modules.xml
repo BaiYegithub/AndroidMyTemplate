@@ -3,25 +3,25 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Template.iml" filepath="$PROJECT_DIR$/Template.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/appk/appk.iml" filepath="$PROJECT_DIR$/appk/appk.iml" />
-      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/components.iml" filepath="$PROJECT_DIR$/components/components.iml" />
-      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/frame/frame.iml" filepath="$PROJECT_DIR$/frame/frame.iml" />
-      <module fileurl="file://$PROJECT_DIR$/framework/framework.iml" filepath="$PROJECT_DIR$/framework/framework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/materialdesign/materialdesign.iml" filepath="$PROJECT_DIR$/materialdesign/materialdesign.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mixed/mixed.iml" filepath="$PROJECT_DIR$/mixed/mixed.iml" />
-      <module fileurl="file://$PROJECT_DIR$/profession/profession.iml" filepath="$PROJECT_DIR$/profession/profession.iml" />
-      <module fileurl="file://$PROJECT_DIR$/safety/safety.iml" filepath="$PROJECT_DIR$/safety/safety.iml" />
-      <module fileurl="file://$PROJECT_DIR$/smalllibrary/smalllibrary.iml" filepath="$PROJECT_DIR$/smalllibrary/smalllibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/system/system.iml" filepath="$PROJECT_DIR$/system/system.iml" />
-      <module fileurl="file://$PROJECT_DIR$/third/third.iml" filepath="$PROJECT_DIR$/third/third.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/unit/unit.iml" filepath="$PROJECT_DIR$/unit/unit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Template.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Template.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appk/Template.appk.iml" filepath="$PROJECT_DIR$/.idea/modules/appk/Template.appk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/Template.client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/Template.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/Template.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/Template.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/components/Template.components.iml" filepath="$PROJECT_DIR$/.idea/modules/components/Template.components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Template.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Template.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frame/Template.frame.iml" filepath="$PROJECT_DIR$/.idea/modules/frame/Template.frame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/Template.framework.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/Template.framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java/Template.java.iml" filepath="$PROJECT_DIR$/.idea/modules/java/Template.java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/materialdesign/Template.materialdesign.iml" filepath="$PROJECT_DIR$/.idea/modules/materialdesign/Template.materialdesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mixed/Template.mixed.iml" filepath="$PROJECT_DIR$/.idea/modules/mixed/Template.mixed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/profession/Template.profession.iml" filepath="$PROJECT_DIR$/.idea/modules/profession/Template.profession.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/safety/Template.safety.iml" filepath="$PROJECT_DIR$/.idea/modules/safety/Template.safety.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smalllibrary/Template.smalllibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/smalllibrary/Template.smalllibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/system/Template.system.iml" filepath="$PROJECT_DIR$/.idea/modules/system/Template.system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/third/Template.third.iml" filepath="$PROJECT_DIR$/.idea/modules/third/Template.third.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/Template.ui.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/Template.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unit/Template.unit.iml" filepath="$PROJECT_DIR$/.idea/modules/unit/Template.unit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/Template.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/Template.utils.iml" />
     </modules>
   </component>
 </project>

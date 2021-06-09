@@ -2,10 +2,9 @@ package app.vp.cn.ui;
 
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +21,8 @@ public class CoordinatorLayoutActivity extends BaseActivity {
     CoordinatorLayout coordinatorLayout;
     @BindView(R.id.appBar)
     AppBarLayout appBarLayout;
+    private ItemAdapter itemAdapter;
+    private List<String> strings;
 
     @Override
     protected int initContentView() {
@@ -30,13 +31,24 @@ public class CoordinatorLayoutActivity extends BaseActivity {
 
     @Override
     protected void initViewAndData() {
-        List<String> strings = new ArrayList<>();
+        strings = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            strings.add("地"+i);
+            strings.add("地" + i);
         }
         rcv.setLayoutManager(new LinearLayoutManager(this));
-        ItemAdapter itemAdapter = new ItemAdapter(strings);
+        itemAdapter = new ItemAdapter(strings);
         rcv.setAdapter(itemAdapter);
+
+        findViewById(R.id.bt_change).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                for (int i = 0; i < strings.size(); i++) {
+                    strings.get(i).concat("天");
+                    itemAdapter.notifyDataSetChanged();
+                }
+            }
+        });
     }
 
     @Override

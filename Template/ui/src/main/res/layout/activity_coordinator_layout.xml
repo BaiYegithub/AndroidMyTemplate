@@ -42,4 +42,13 @@
 
     </android.support.v7.widget.RecyclerView>
 
+
+    <Button
+        android:id="@+id/bt_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="点击改变"
+        />
+
 </android.support.design.widget.CoordinatorLayout>
