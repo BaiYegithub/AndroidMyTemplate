@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
-    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec, R.id.to_messenger, R.id.to_provider, R.id.to_WxApp})
+    @OnClick({R.id.bt_add, R.id.bt_get, R.id.to_sec, R.id.to_messenger, R.id.to_provider, R.id.to_WxApp,R.id.toThread})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_add:
@@ -99,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
                 intent3.setAction(Intent.ACTION_VIEW);
                 intent3.setData(Uri.parse("http://pay.wangxiao.cn/zhuntiku/WeiXinGetPara.aspx?ordernumber=201903092027441021046&classID=11111111-1111-1111-1111-111111111111"));
                 startActivity(intent3);
+                break;
+            case R.id.toThread:
+                startActivity(new Intent(MainActivity.this,ThreadActivity.class));
                 break;
         }
     }
