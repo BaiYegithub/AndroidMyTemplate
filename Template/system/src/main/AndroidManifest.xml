@@ -9,14 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ThreadActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ANRTestActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CountDownTimerActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".ThreadActivity" />
+        <activity android:name=".MainActivity"></activity>
 
         <service
             android:name=".service.MyAidlService"
@@ -31,8 +39,8 @@
 
         <activity
             android:name=".SecondActivity"
-            android:process=":lala"></activity>
-        <activity android:name=".MessengerActivity"></activity>
+            android:process=":lala" />
+        <activity android:name=".MessengerActivity" />
 
         <provider
             android:name=".provider.BookProvider"
@@ -41,10 +49,8 @@
             android:process=":provider" /> <!-- 访问BookProvider 要加上和BookProvider 一样的权限 -->
         <activity
             android:name=".ProviderActivity"
-            android:permission="app.system.PROVIDER"></activity>
-        <activity android:name=".HandlerActivity">
-
-        </activity>
+            android:permission="app.system.PROVIDER" />
+        <activity android:name=".HandlerActivity" />
     </application>
 
 </manifest>

@@ -35,5 +35,9 @@ public class MyMain {
         if((1&1)!=0){
             System.out.print("(1&1)!=0");
         }
+
+        String strTest = "每一个传说，都会随时间褪色";
+        strTest = strTest.substring(1,strTest.length()-1);
+        System.out.print(strTest);
     }
 }

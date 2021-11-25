@@ -33,5 +33,7 @@ dependencies {
     compile project(':common')
     testCompile 'junit:junit:4.12'
 
-    compile 'com.airbnb.android:lottie:2.1.0'
+    implementation ('com.airbnb.android:lottie:2.7.0',{
+        exclude group:'com.android.support'
+    })
 }

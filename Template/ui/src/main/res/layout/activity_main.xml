@@ -36,98 +36,120 @@
         android:textColor="@color/colorPrimary"
         android:textSize="20sp" />
 
-    <!-- <app.vp.cn.ui.view.FlowLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content">
+    <app.vp.cn.ui.view.testview.TagsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:horizontal_single_interval="10dp"
+        app:vertical_single_interval="10dp">
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="纤云弄巧"
-             android:layout_margin="15dp"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="大江东去，浪淘尽，千古分流人物，故垒西边，人道是，三国周郎赤壁，
+乱石穿空，惊涛拍岸，卷起千堆雪"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="飞星传恨"
-             android:layout_margin="15dp"
-             android:textSize="14dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="纤云弄巧"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="银汉迢迢暗渡"
-             android:textSize="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="飞星传恨"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="金风玉露一相逢"
-             android:textSize="18dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="银汉迢迢暗渡"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="便胜却人间无数"
-             android:textSize="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="金风玉露一相逢"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="来历"
-             android:textSize="22dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="便胜却人间无数"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="滴滴滴多"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="柔情似水"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="佳期如梦"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="忍顾鹊桥归路"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="两情若是久长时"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="又岂在朝朝暮暮"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="啦啦啦啦"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="啦啦啦啦"
+            android:textSize="20dp" />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="啦啦啦啦"
-             android:textSize="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="啦啦啦啦"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="啦啦啦啦"
+            android:textSize="20dp" />
 
 
-     </app.vp.cn.ui.view.FlowLayout>-->
+    </app.vp.cn.ui.view.testview.TagsLayout>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_acMain"
@@ -146,10 +168,10 @@
         android:id="@+id/viewflipper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autoStart="true"
         android:layout_gravity="center_horizontal"
-        android:flipInterval="5000"
+        android:autoStart="true"
         android:background="@drawable/bg_weather_top_ad_banner"
+        android:flipInterval="5000"
         android:inAnimation="@anim/right_in"
         android:outAnimation="@anim/left_out"
         android:persistentDrawingCache="animation"></ViewFlipper>
@@ -162,28 +184,29 @@
         android:ellipsize="marquee"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:singleLine="true"
-        android:scrollbarFadeDuration="3000"
         android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollbarFadeDuration="3000"
+        android:singleLine="true"
         android:text="没有什么能够阻挡，"
         android:textColor="@color/white"
-        android:marqueeRepeatLimit="marquee_forever"
         android:textSize="20dp" />
 
     <Button
         android:id="@+id/bt_toWaveAc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到waveActivity"/>
+        android:text="跳转到waveActivity" />
+
     <RelativeLayout
         android:id="@+id/rlv_ib_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/iv_splash_logo"
-            />
+            android:src="@drawable/iv_splash_logo" />
     </RelativeLayout>
 
     <ImageView
@@ -204,7 +227,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="123"/>
+            android:text="123" />
 
 
     </app.vp.cn.ui.view.CustomFrameLayout>

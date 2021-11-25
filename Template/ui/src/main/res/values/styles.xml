@@ -21,4 +21,13 @@
         <item name="android:textColor">#3347FF</item>
     </style>
 
+    <declare-styleable name="TagsLayout">
+        <attr name="horizontal_single_interval" format="dimension"/>
+        <attr name="vertical_single_interval" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PhotoView">
+        <attr name="photoview_src" format="integer"/>
+
+    </declare-styleable>
 </resources>

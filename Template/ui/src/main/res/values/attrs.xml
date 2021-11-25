@@ -2,13 +2,31 @@
 <resources>
     <declare-styleable name="VerticalRollingTextView">
         <!--两次动画之间的间隔-->
-        <attr name="animInterval" format="integer"/>
+        <attr name="animInterval" format="integer" />
         <!--展示条目的个数-->
-        <attr name="itemCount" format="integer"/>
+        <attr name="itemCount" format="integer" />
         <!--多行显示时自适应文字的最大文字大小-->
-        <attr name="maxTextSize" format="dimension"/>
+        <attr name="maxTextSize" format="dimension" />
         <!--多行显示时自适应文字的最小文字大小-->
-        <attr name="minTextSize" format="dimension"/>
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CustomTitleView">
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension"></attr>
+        <attr name="titleText" format="string"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageTitleView">
+        <attr name="titleColorC" format="color" />
+        <attr name="titleSizeC" format="dimension"></attr>
+        <attr name="titleTextC" format="string"></attr>
+        <attr name="imageResC" format="reference"></attr>
+        <attr name="imageScaleTypeC">
+            <enum name="fillXY" value="0" />
+            <enum name="center" value="1" />
+        </attr>
     </declare-styleable>
 </resources>
 

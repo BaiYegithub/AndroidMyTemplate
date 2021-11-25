@@ -33,6 +33,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     implementation 'jp.wasabeef:richeditor-android:1.2.2'
+    compile 'com.yanzhikai:BooheeRuler:0.0.7'
     testCompile 'junit:junit:4.12'
     implementation project(':common')
 }

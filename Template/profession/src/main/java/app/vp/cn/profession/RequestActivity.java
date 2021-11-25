@@ -1,21 +1,9 @@
 package app.vp.cn.profession;
 
-import android.net.Uri;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-
-import com.google.gson.JsonObject;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import android.view.View;
 
 public class RequestActivity extends AppCompatActivity {
 
@@ -24,6 +12,18 @@ public class RequestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
 
+        findViewById(R.id.bt_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("bai", "onClick: >>>>>点击了bt1");
+            }
+        });
+        findViewById(R.id.bt_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("bai", "onClick: >>>>>>>>>点击了bt2");
+            }
+        });
        /* new Thread(new Runnable() {
             @Override
             public void run() {

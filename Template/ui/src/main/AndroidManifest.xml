@@ -30,41 +30,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConstraintLayoutActivity">
-
-        </activity>
-        <activity android:name=".RecyclerViewActivity">
-
-        </activity>
-        <activity android:name=".ScrollOverActivity" />
-        <activity android:name=".ScrollViewActivity" >
-
-
-        </activity>
-        <activity android:name=".EventDispatchActivity" />
-        <activity android:name=".BlurActivity" />
-        <activity android:name=".CoordinatorLayoutActivity" >
+        <activity
+            android:name=".PhotoViewActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ImageScaleActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".RuleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.FlipBoardActivity"
+            android:exported="true" />
+        <activity android:name=".CustomViewActivity" />
+        <activity android:name=".NestScrollActivity" />
+        <activity android:name=".ConstraintLayoutActivity" />
+        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".ScrollOverActivity" />
+        <activity android:name=".ScrollViewActivity" />
+        <activity android:name=".EventDispatchActivity" />
+        <activity android:name=".BlurActivity" />
+        <activity android:name=".CoordinatorLayoutActivity" />
         <activity android:name=".InternationalizationActivity" />
         <activity android:name=".GestureDetectorActivity" />
         <activity android:name=".HorizontalScrollViewActivity" />
         <activity android:name=".NestScrollViewActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerActivity" />
         <activity
             android:name=".WaveActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="wave" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".HtmlEditActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />

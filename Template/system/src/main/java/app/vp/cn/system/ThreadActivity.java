@@ -18,36 +18,37 @@ public class ThreadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thread);
-        final ExecutorService executor = Executors.newCachedThreadPool();
-        final List<FutureTask<String>> futureTaskList = new ArrayList<>();
+        ExecutorService excutor = Executors.newCachedThreadPool();
+        final List<FutureTask<String>> futureTasks = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             final int finalI = i;
-            futureTaskList.add(new FutureTask<String>(new Callable<String>() {
+            futureTasks.add(new FutureTask<String>(new Callable<String>() {
                 @Override
                 public String call() throws Exception {
-                    Thread.sleep(finalI % 3 * 1000);
+                    Thread.sleep( finalI % 4*1000);
                     return "我是" + finalI;
                 }
             }));
         }
-        for (int i = 0; i < futureTaskList.size(); i++) {
-            executor.execute(futureTaskList.get(i));
+        for (int i = 0; i < futureTasks.size(); i++) {
+            excutor.submit(futureTasks.get(i));
         }
-
-        executor.execute(new Runnable() {
+        excutor.execute(new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i < futureTaskList.size(); i++) {
+                for (int i = 0; i < futureTasks.size(); i++) {
                     try {
-                        String s = futureTaskList.get(i).get();
-                        Log.i("bai", "run: >>>>>>> "+s);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        Log.i("bai", "run: >>>"+futureTasks.get(i).get());
+                        Log.i("bai", "run: 当前线程名称是"+Thread.currentThread().getName());
                     } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             }
         });
+
+
     }
 }

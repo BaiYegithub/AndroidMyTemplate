@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customApp="http://schemas.android.com/apk/res/app.vp.cn.ui"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CustomViewActivity">
+
+    <app.vp.cn.ui.view.testview.CustomTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        customApp:titleColor="@color/colorPrimaryDark"
+        customApp:titleSize="30dp"
+        customApp:titleText="沒有什麽辦法也没有什么能够阻挡，你对自由的向往" />
+
+    <app.vp.cn.ui.view.testview.CustomImageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        customApp:imageResC="@drawable/pic_1"
+        customApp:imageScaleTypeC="fillXY"
+        customApp:titleColorC="@color/colorPrimaryDark"
+        customApp:titleSizeC="12dp"
+        customApp:titleTextC="没" />
+
+    <app.vp.cn.ui.view.testview.CustomViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_margin="10dp"/>
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#00ff00"
+            android:layout_margin="10dp"/>
+        <View
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:background="#0000ff"
+            android:layout_margin="10dp"/>
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#020202"
+            android:layout_margin="10dp"/>
+    </app.vp.cn.ui.view.testview.CustomViewGroup>
+</LinearLayout>
